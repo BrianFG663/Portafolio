@@ -1,0 +1,63 @@
+header {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(136, 222, 251, 0.4);
+    height: 3rem;
+    width: 40%;
+    border-radius: 15px;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+
+.botonesCabecera {
+    cursor: pointer;
+    height: 80%;
+    width: 3.5rem;
+    border: none;
+    position: relative;
+    top: 10%;
+    background-color: transparent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+
+.botonesCabecera:hover {
+    width: 8rem;
+}
+
+
+.botonesCabecera svg {
+    width: 24px;
+    height: 24px;
+    fill: #4b2c9e;
+    flex-shrink: 0;
+}
+
+.textoBoton {
+    white-space: nowrap;
+    opacity: 0;
+    font-weight: 600;
+    transform: translateX(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-weight: 500;
+    color: #4b2c9e;
+    font-family: monospace;
+}
+
+.botonesCabecera:hover .textoBoton {
+    opacity: 1;
+    margin-left: 5px;
+    transform: translateX(0);
+    font-weight: 600;
+    font-family: monospace;
+}

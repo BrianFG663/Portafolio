@@ -1,0 +1,218 @@
+.sobreMi {
+  width: 80%;
+  position: relative;
+  left: 10%;
+  color: #111857;
+  margin-bottom: 1vh;
+  font-family: monospace;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 75vh;
+}
+
+.tituloPresentacion {
+  font-size: 1.2rem;
+}
+
+.conte{
+    width: 70%;
+}
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+}
+
+.experiencia {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.contenedorCarta{
+  width: 90%;
+  border: 1px solid green;
+  display: flex;
+  height: 35%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite que las cartas pasen a la siguiente línea si no caben */
+  gap: 2rem; /* Espacio uniforme entre cartas */
+}
+
+.carta {
+  background-color: white;
+  cursor: pointer;
+  width: 45%;
+  min-width: 300px; 
+  box-shadow: 0 0 10px rgba(136, 222, 251, 0.4);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 80%;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.carta:hover {
+  transform: scale(1.01);
+  border-left: 2px solid #4b2c9e;
+  border-right: 2px solid #4b2c9e;
+}
+
+.carta svg {
+  width: 8%;
+  height: auto;
+  color: #4b2c9e;
+}
+
+.carta span {
+  width: 85%;
+  font-size: 90%;
+}
+
+.carta span strong {
+  font-size: 140%;
+}
+
+.certificaciones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite bajar a otra línea en pantallas muy pequeñas */
+  gap: 1.5rem;
+}
+
+.certificaciones div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  text-align: center;
+}
+
+.numero{
+  font-weight: 600;
+  font-size: 2rem;
+  color: #4b2c9e;
+}
+
+.texto{
+  font-weight: 600;
+  color: #111857;
+}
+
+/* ====================== MEDIA QUERIES ====================== */
+
+/* Pantallas medianas (laptops pequeñas, tablets landscape) */
+@media (max-width: 1024px) {
+  .sobreMi {
+    width: 90%;
+    left: 5%;
+  }
+
+  .conte {
+    width: 85%;
+  }
+
+  .carta {
+    font-size: 75%;
+  }
+
+  .carta svg {
+    width: 10%;
+  }
+}
+
+/* Tablets portrait y laptops muy pequeñas */
+@media (max-width: 768px) {
+  .sobreMi {
+    height: auto; /* Permite crecer si el contenido necesita más espacio */
+    min-height: 75vh;
+    padding: 2rem 0;
+  }
+
+  .conte {
+    width: 95%;
+  }
+
+  .experiencia {
+    top: 2vh;
+  }
+
+  .contenedorCarta {
+    height: auto; /* Se adapta al contenido */
+    padding: 1rem 0;
+  }
+
+  .carta {
+    width: 100%; /* Cada carta ocupa todo el ancho disponible */
+    max-width: 500px;
+    flex-direction: column; /* Icono arriba, texto abajo para mejor legibilidad */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .carta svg {
+    width: 15%;
+    margin-bottom: 1rem;
+  }
+
+  .carta span {
+    width: 100%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .sobreMi {
+    width: 96%;
+    left: 2%;
+    font-size: 1rem;
+  }
+
+  .presentacion p {
+    text-align: center;
+  }
+
+  .certificaciones {
+    justify-content: center;
+  }
+
+  .certificaciones div {
+    width: 33%;
+    min-width: 80px;
+  }
+
+  .numero {
+    font-size: 1.8rem;
+  }
+
+  .texto {
+    font-size: 0.9rem;
+  }
+
+  .carta {
+    min-width: auto;
+    font-size: 85%;
+  }
+
+  .carta svg {
+    width: 20%;
+  }
+}

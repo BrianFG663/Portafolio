@@ -1,0 +1,139 @@
+
+main{
+  width: 100%;
+  height: auto;
+  background-color: #f2f9fb;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    position: relative;
+    z-index: 0;
+    left: 15%;
+    top: 12vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorInformacion{
+    width: 45%;
+    position: relative;
+    z-index: 2;
+    font-family: monospace;
+}
+
+.tituloNombre{
+    color: #111857;
+    width: 100%;
+    font-weight: 100;
+}
+
+.tituloNombre strong{
+    font-weight: 600;
+}
+
+ /* subtitulo y efecto */
+
+.subTitulo{
+    color: #111857;
+    white-space: pre;
+    position: relative;
+    bottom: 1rem;
+}
+
+.subTitulo strong{
+    font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;              
+  background-color: transparent; 
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* --- */
+
+.introduccion{
+    color: #384481;
+    font-weight: 100;
+    width: 100%;
+}
+
+.introduccion strong {
+    font-weight: 600;
+}
+
+.contenedorFoto{
+    width: 55%;
+    position: relative;
+    z-index: 2;
+}
+
+.lineas{
+  position: absolute;
+  top: 14rem;
+  left: 40%;
+  width: 45%;
+  height: 15rem;
+  z-index: 1;
+  opacity: 0.05;
+  pointer-events: none; /* no bloquea clics ni interacciones */
+}
+
+.botonesPersonales{
+    display: flex;
+    width: 60%;
+    position: relative;
+    top: 2.5rem;
+    left: 15%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.botonConoceme, .botonProyectos{
+    background-color: transparent;
+    border: 2px solid #111857;
+    border-radius: 4px;
+    color: #111857;
+    padding: 0.7rem;
+    width: 45%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.botonConoceme:hover, .botonProyectos:hover{
+    width: 48%;
+}
+
+.contenedorSobreMi{
+    position: relative;
+    top: 20rem;
+    margin-bottom: 2vh;
+}
+
+.tituloSobreMi {
+  font-family: monospace;
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  font-weight: 100;
+  top: 30vh;
+  border-radius: 8px;
+  color: #111857;
+  width: 100%;
+}
+
+.tituloSobreMi strong{
+  font-weight: 600;
+}

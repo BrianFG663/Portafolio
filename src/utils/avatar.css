@@ -1,0 +1,70 @@
+.avatar-container {
+  position: relative;
+  width: 55%;
+  left: 10%;
+  height: auto;
+  z-index: 100;
+}
+
+.avatar-base {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 100;
+}
+
+.ojos {
+  position: absolute;
+  top: 40.3%;   /* ajustá según tu avatar */
+  left: 48.4%;
+  width: 52%;
+  transform: translate(-50%, -50%);
+  display: flex;
+    justify-content: space-around;
+}
+
+.ojo {
+  overflow: visible;
+    width: 17%;
+    height: auto;
+}
+
+
+.cara {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.cejas {
+  position: absolute;
+  top: 31%; 
+  left: 48.5%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.ceja {
+  width: 35%;
+  height: 1rem;
+  background: #4b2c9e;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.ceja-izq {
+  top: 50px;
+  left: 50px;
+}
+
+.ceja-der {
+  top: 50px;
+  right: 50px;
+}
+
+
+
