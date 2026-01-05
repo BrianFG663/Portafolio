@@ -91,7 +91,7 @@ main{
 
 .botonesPersonales{
     display: flex;
-    width: 60%;
+    width: 70%;
     position: relative;
     top: 2.5rem;
     left: 15%;
@@ -103,16 +103,19 @@ main{
     background-color: transparent;
     border: 2px solid #111857;
     border-radius: 4px;
+    text-align: center;
+    text-decoration: inherit;
     color: #111857;
     padding: 0.7rem;
-    width: 45%;
+    width: 40%;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s all;
+    gap: 1rem;
 }
 
 .botonConoceme:hover, .botonProyectos:hover{
-    width: 48%;
+    width: 44%;
 }
 
 .contenedorSobreMi{
@@ -121,19 +124,3 @@ main{
     margin-bottom: 2vh;
 }
 
-.tituloSobreMi {
-  font-family: monospace;
-  font-size: 2.5rem;
-  padding: 1rem;
-  text-align: center;
-  position: relative;
-  font-weight: 100;
-  top: 30vh;
-  border-radius: 8px;
-  color: #111857;
-  width: 100%;
-}
-
-.tituloSobreMi strong{
-  font-weight: 600;
-}

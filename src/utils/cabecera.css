@@ -12,6 +12,7 @@ header {
     padding: 0 1rem;
     justify-content: space-around;
     z-index: 100;
+    text-decoration: inherit;
 }
 
 
@@ -60,4 +61,5 @@ header {
     transform: translateX(0);
     font-weight: 600;
     font-family: monospace;
+    
 }

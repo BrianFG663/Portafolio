@@ -39,8 +39,8 @@ export default function Home(){
           <h2 className='subTitulo'>{subTitulo}</h2>
           <h2 className='introduccion'><strong>Especializado en la construcción de aplicaciones web robustas y escalables</strong> con <strong>PHP/Laravel</strong>, <strong>React</strong> y <strong>MySQL</strong>. Apasionado por la resolución de problemas, la arquitectura de sistemas y las <strong>buenas prácticas de desarrollo</strong>.</h2>
           <div className='botonesPersonales'>
-            <button className='botonConoceme'>Acerca de mi</button>
-            <button className='botonProyectos'>Mis proyectos</button>
+            <a href="#AcercaDeMi" className='botonConoceme'>Acerca de mi</a>
+            <a href="#Proyectos" className='botonProyectos'>Mis proyectos</a>
           </div>
           <Botones></Botones>
         </div>
@@ -49,7 +49,6 @@ export default function Home(){
         </div>
       </div>
 
-      <h1 className="tituloSobreMi" id="AcercaDeMi">Descubre mas <strong>sobre mi</strong><span className="cursor">_</span></h1>
 
       <div className='contenedorSobreMi'>
         <SobreMi></SobreMi>
