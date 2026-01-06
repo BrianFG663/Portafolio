@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../utils/sobreMi.css'
-import { WrenchScrewdriverIcon, CpuChipIcon, ServerStackIcon,ChartBarIcon } from '@heroicons/react/24/outline'
+import { WrenchScrewdriverIcon, CpuChipIcon, ServerStackIcon,ChartBarIcon,ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import php from '../assets/lenguajes/php.png'
 import css from '../assets/lenguajes/css.png'
 import html from '../assets/lenguajes/html.png'
@@ -92,6 +92,18 @@ export default function sobreMi(){
                     </div>
                 </div>
             </div>
+
+            
+            <div className='contenedorDescargas'>
+                <h2>¿Deseas conocer <strong>mas sobre mi</strong>?</h2>
+                <div className='botonesDescargas'>
+                    <a href="/CV-BrianNazarenoGonzalez.pdf" download="CV-BrianNazarenoGonzalez.pdf" className="btn-cv"><ArrowDownTrayIcon></ArrowDownTrayIcon>CV</a>
+                    <a href="/CartaDePresentacion-GonzalezBrianNazareno.pdf" download="CartaDePresentacion-GonzalezBrianNazareno.pdf" className="btn-cv"><ArrowDownTrayIcon></ArrowDownTrayIcon>carta de presentacion</a>
+                </div>
+            </div>
+            
+
+            
         </div>
     )
 }

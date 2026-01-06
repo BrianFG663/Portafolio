@@ -8,12 +8,17 @@
   font-size: 1.1rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;     /* Cambiado: contenido desde arriba */
+  justify-content: flex-start;
+  /* Cambiado: contenido desde arriba */
   align-items: center;
-  min-height: 100vh;               /* Al menos una pantalla completa */
-  height: auto;                    /* Crece según contenido */
-  padding: 2rem 0;                 /* Espacio generoso arriba y abajo */
-  gap: 6rem;                       /* Espacio uniforme entre secciones grandes */
+  min-height: 100vh;
+  /* Al menos una pantalla completa */
+  height: auto;
+  /* Crece según contenido */
+  padding: 2rem 0;
+  /* Espacio generoso arriba y abajo */
+  gap: 6rem;
+  /* Espacio uniforme entre secciones grandes */
   box-sizing: border-box;
 }
 
@@ -30,7 +35,7 @@
   width: 100%;
 }
 
-.tituloSobreMi strong{
+.tituloSobreMi strong {
   font-weight: 600;
 }
 
@@ -41,7 +46,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 4rem;                       /* Espacio entre presentación y certificaciones */
+  gap: 4rem;
+  /* Espacio entre presentación y certificaciones */
   padding: 2rem 0;
   align-items: center;
 }
@@ -73,7 +79,7 @@
 
 }
 
-.certificaciones > div {
+.certificaciones>div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,7 +115,8 @@
   justify-content: center;
   align-items: stretch;
   gap: 4rem;
-  min-height: 80px;                /* Altura mínima sólida para que no se achique */
+  min-height: 80px;
+  /* Altura mínima sólida para que no se achique */
 }
 
 .carta {
@@ -126,7 +133,8 @@
   font-size: 80%;
   transition: transform 0.3s ease;
   padding: 1rem;
-  height: 100%;                    /* Mismo alto cuando están lado a lado */
+  height: 100%;
+  /* Mismo alto cuando están lado a lado */
   align-self: stretch;
 }
 
@@ -161,7 +169,7 @@
   gap: 3rem;
   min-height: 300px;
   padding: 2rem 0;
-  
+
 }
 
 .cartaLenguajes {
@@ -188,23 +196,31 @@
 }
 
 
-.cartaLenguajes > div {
+.cartaLenguajes>div {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;                   /* Permite múltiples filas */
-  justify-content: center;           /* Centra todo el grupo */
+  flex-wrap: wrap;
+  /* Permite múltiples filas */
+  justify-content: center;
+  /* Centra todo el grupo */
   align-items: center;
-  gap: 2rem;                         /* Espacio uniforme entre imágenes */
+  gap: 2rem;
+  /* Espacio uniforme entre imágenes */
   width: 100%;
-  max-width: 400px;                  /* Controla el ancho máximo del bloque de imágenes */
+  max-width: 400px;
+  /* Controla el ancho máximo del bloque de imágenes */
 }
 
 /* Cada imagen individual */
 .cartaLenguajes div img {
-  width: 80px;                       /* Tamaño fijo para uniformidad (ajustalo si querés más grande) */
-  height: 80px;                      /* Altura fija para que queden alineadas */
-  object-fit: contain;               /* Mantiene proporción, evita pixelado o deformación */
-  flex: 0 0 auto;                    /* No crece ni se encoge */
+  width: 80px;
+  /* Tamaño fijo para uniformidad (ajustalo si querés más grande) */
+  height: 80px;
+  /* Altura fija para que queden alineadas */
+  object-fit: contain;
+  /* Mantiene proporción, evita pixelado o deformación */
+  flex: 0 0 auto;
+  /* No crece ni se encoge */
   transition: transform 0.3s ease;
 }
 
@@ -214,11 +230,62 @@
 }
 
 .spanScroll {
-  position: absolute;   /* sale del flujo */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+}
+
+.contenedorDescargas {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedorDescargas h2{
+  font-weight: 100;
+}
+
+.contenedorDescargas h2 strong{
+  font-weight: 600;
+}
+
+.botonesDescargas{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #111857;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: inherit;
+  color: #111857;
+  width: 30%;
+  padding: 0.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s all;
+  gap: 1rem;
+}
+
+.btn-cv:hover{
+  width: 32%;
+}
+
+.btn-cv svg {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 
