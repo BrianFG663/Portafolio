@@ -6,6 +6,7 @@ import Cabecera from '../components/Cabecera'
 import Botones from '../components/Botones'
 import Overlay from '../components/Overlay'
 import SobreMi from '../components/SobreMi'
+import Experiencias from '../components/Experiencias'
 
 
 
@@ -53,6 +54,9 @@ export default function Home(){
       <div className='contenedorSobreMi'>
         <SobreMi></SobreMi>
       </div>     
+
+      <Experiencias></Experiencias>
+  
       
     </main>
     
