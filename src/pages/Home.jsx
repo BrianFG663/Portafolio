@@ -7,7 +7,7 @@ import Botones from '../components/Botones'
 import Overlay from '../components/Overlay'
 import SobreMi from '../components/SobreMi'
 import Experiencias from '../components/Experiencias'
-
+import Proyectos from '../components/Proyectos'
 
 
 export default function Home(){
@@ -56,6 +56,7 @@ export default function Home(){
       </div>     
 
       <Experiencias></Experiencias>
+      <Proyectos></Proyectos>
   
       
     </main>

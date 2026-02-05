@@ -1,0 +1,81 @@
+.contenedorClubia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #111857;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+strong {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+.contenedorClubia>span {
+    width: 40%;
+    text-align: center;
+    position: relative;
+    top: 5vh;
+}
+
+.plyr {
+    border: 2px solid #2f356b;
+    --plyr-color-main: #2f356b;
+    width: 55%;
+    position: relative;
+    top: 10vh;
+}
+
+.funcionalidades {
+    position: relative;
+    top: 15vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.funcionalidadesSeccion {
+    margin-bottom: 3rem;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(136, 222, 251, 0.4);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.funcionalidadesSeccion:hover {
+    transform: scale(1.01);
+    border-left: 2px solid #4b2c9e;
+    border-right: 2px solid #4b2c9e;
+}
+
+.funcionalidadesSeccion > h3 {
+    color: #4b2c9e;
+    font-weight: 600;
+}
+
+.titulotres{
+    position: relative;
+    top: 15vh;
+}
+
+
+
+.contenedorClubia > .contenedorLenguajes{
+    margin-bottom: 5rem;
+        position: relative;
+    top: 15vh;
+}

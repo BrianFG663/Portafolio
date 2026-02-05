@@ -1,0 +1,48 @@
+.scroll-deco {
+  position: fixed;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-deco.show {
+  opacity: 0.4;
+  transform: translateY(0);
+}
+
+.scroll-deco.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.scroll-deco.right {
+  right: 80px;
+}
+
+.scroll-deco.left {
+  left: 80px;
+}
+
+.scroll-deco span {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #4b2c9e;
+}
+
+.scroll-deco .line {
+  width: 2px;
+  height: 620px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #4b2c9e,
+    transparent
+  );
+}

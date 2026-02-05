@@ -9,16 +9,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* Cambiado: contenido desde arriba */
   align-items: center;
   min-height: 100vh;
-  /* Al menos una pantalla completa */
   height: auto;
-  /* Crece según contenido */
   padding: 2rem 0;
-  /* Espacio generoso arriba y abajo */
   gap: 6rem;
-  /* Espacio uniforme entre secciones grandes */
   box-sizing: border-box;
 }
 
