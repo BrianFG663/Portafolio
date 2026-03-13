@@ -1,7 +1,6 @@
 .contenedorProyecto{
     position: relative;
     top: 30rem;
-    border: 1px solid green;
     width: 100%;
     font-family: monospace;
   font-size: 1.1rem;
@@ -167,6 +166,62 @@
 }
 
 .contenedorImagenMabra:hover .overlayMabra {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+.contenedorImagenKaren{
+  background-color: #ebf2fc;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  border-radius: 1px;
+  height: 25vh;
+  opacity: 0.8;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.contenedorImagenKaren a svg{
+  width: 50px;
+  height: auto;
+  opacity: 1 !important;
+  color: #814ddd;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.904);
+}
+
+.contenedorImagenKaren:hover .overlay {
+  opacity: 1;
+}
+
+.contenedorImagenKaren img{
+  width: 15%;
+  height: auto;
+}
+
+.overlayKaren {
+  position: absolute;
+  inset: 0;
+  background: #814ddd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contenedorImagenKaren:hover .overlayKaren {
   opacity: 1;
 }
 

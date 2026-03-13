@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
 import '../utils/sobreMi.css'
-import { WrenchScrewdriverIcon, CpuChipIcon, ServerStackIcon,ChartBarIcon,ArrowDownTrayIcon } from '@heroicons/react/24/outline'
+import {ServerStackIcon,ChartBarIcon,ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import php from '../assets/lenguajes/php.png'
 import css from '../assets/lenguajes/css.png'
 import html from '../assets/lenguajes/html.png'

@@ -1,0 +1,131 @@
+.obr-alq-carrusel {
+  margin: 3rem 0 5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 0 1rem 1.5rem;
+  box-shadow: 
+    0 -10px 20px -15px rgba(0,0,0,0.1),
+    0 10px 20px -15px rgba(0,0,0,0.1);
+}
+
+.funcionalidades > .obr-alq-carrusel {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.obr-alq-carrusel h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: #e0e0e0;
+}
+
+.obr-alq-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.obr-alq-marquee-track {
+  display: flex;
+  gap: 0.9rem;
+  animation: obr-alq-scroll 55s linear infinite;
+  will-change: transform;
+  min-width: max-content;
+  padding: 0.4rem 0;
+}
+
+.obr-alq-marquee-item {
+  flex-shrink: 0;
+  width: 220px;
+  max-width: 260px;
+}
+
+.obr-alq-img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+}
+
+/* Responsive - aún chicos */
+@media (min-width: 768px) {
+  .obr-alq-marquee-item {
+    width: 240px;
+    max-width: 280px;
+  }
+  .obr-alq-img {
+    max-height: 520px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .obr-alq-marquee-item {
+    width: 260px;
+    max-width: 300px;
+  }
+  .obr-alq-img {
+    max-height: 560px;
+  }
+}
+
+.obr-alq-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+}
+
+@keyframes obr-alq-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+/* Lightbox */
+.obr-alq-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.obr-alq-lightbox-img {
+  max-width: 90vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 100px rgba(0,0,0,0.85);
+}
+
+.obr-alq-btn-cerrar {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  border: none;
+  font-size: 44px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.obr-alq-btn-cerrar:hover {
+  background: #ef4444;
+  transform: scale(1.1);
+}

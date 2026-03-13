@@ -38,3 +38,26 @@
     border: none;
     cursor: pointer;
 }
+
+.botonHome{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #7968bb49;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.botonHome:hover{
+    color: #7968bb !important;
+    cursor: pointer;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+
+}

@@ -195,15 +195,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* Permite múltiples filas */
   justify-content: center;
-  /* Centra todo el grupo */
   align-items: center;
   gap: 2rem;
-  /* Espacio uniforme entre imágenes */
   width: 100%;
   max-width: 400px;
-  /* Controla el ancho máximo del bloque de imágenes */
 }
 
 /* Cada imagen individual */
