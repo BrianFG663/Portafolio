@@ -15,7 +15,7 @@ import node from '../assets/lenguajes/node.png'
 
 import login from '../assets/ObrAlquiler/Login.PNG'
 import registro from '../assets/ObrAlquiler/Registro.jpg'
-import edicion from '../assets/ObrAlquiler/Edicion.jpg'
+import edicion from '../assets/ObrAlquiler/edicion.jpg'
 import alertas from '../assets/ObrAlquiler/AlertasAmigables.jpg'
 import historialObras from '../assets/ObrAlquiler/2HistorialDeObras.PNG'
 import detalleObra from '../assets/ObrAlquiler/2DetalleDeObra.PNG'
