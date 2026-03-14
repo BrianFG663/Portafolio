@@ -31,7 +31,7 @@ import asignacion  from '../assets/ObrAlquiler/3asignacionesDeMaquinariasObras.P
 import detalleAsignacion  from '../assets/ObrAlquiler/3DetalleAsignacion.PNG'
 import reporte  from '../assets/ObrAlquiler/3ReporteMaquina.PNG'
 import agregarAsignacion  from '../assets/ObrAlquiler/3AgregarAsignacion.PNG'
-import laragon from '../assets/lenguajes/laragon.PNG'
+import laragon from '../assets/lenguajes/laragon.png'
 import ScrollIndicator from '../components/scroll'
 
 
