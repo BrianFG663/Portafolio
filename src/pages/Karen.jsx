@@ -19,7 +19,7 @@ import creaprofesor from '../assets/karen/2creaprofesor.jpg'
 import login from '../assets/karen/login.PNG'
 
 import aceptarAlumno from '../assets/karen/1aceptarAlumno.PNG'
-import menuAgregar from '../assets/karen/1menuAgregar.PNG'
+import menuAgregar from '../assets/karen/1menuAgregar.png'
 import agregarTarea from '../assets/karen/1agregarTarea.PNG'
 import alumnosAceptados from '../assets/karen/1alumnosAceptados.PNG'
 
