@@ -16,24 +16,24 @@ import figma from '../assets/lenguajes/Figma.png'
 
 import creaMateria from '../assets/karen/2creaMateria.jpg'
 import creaprofesor from '../assets/karen/2creaprofesor.jpg'
-import login from '../assets/karen/login.PNG'
+import login from '../assets/karen/login.png'
 
-import aceptarAlumno from '../assets/karen/1aceptarAlumno.PNG'
-import menuAgregar from '../assets/karen/1menuAgregar.PNG'
-import agregarTarea from '../assets/karen/1agregarTarea.PNG'
-import alumnosAceptados from '../assets/karen/1alumnosAceptados.PNG'
+import aceptarAlumno from '../assets/karen/1aceptarAlumno.png'
+import menuAgregar from '../assets/karen/1menuAgregar.png'
+import agregarTarea from '../assets/karen/1agregarTarea.png'
+import alumnosAceptados from '../assets/karen/1alumnosAceptados.png'
 
 
-import revision from '../assets/karen/3revision.PNG'
-import matriculaAceptada from '../assets/karen/3matriculaAceptada.PNG'
-import matriculaRechazada from '../assets/karen/3matriculaRechazada.PNG'
-import inicio from '../assets/karen/3inicio.PNG'
+import revision from '../assets/karen/3revision.png'
+import matriculaAceptada from '../assets/karen/3matriculaAceptada.png'
+import matriculaRechazada from '../assets/karen/3matriculaRechazada.png'
+import inicio from '../assets/karen/3inicio.png'
 import tarea from '../assets/karen/3tarea.jpg'
 
-import registro1 from '../assets/karen/registro1.PNG'
-import registro2 from '../assets/karen/registro2.PNG'
-import registro3 from '../assets/karen/registro3.PNG'
-import registro4 from '../assets/karen/registro4.PNG'
+import registro1 from '../assets/karen/registro1.png'
+import registro2 from '../assets/karen/registro2.png'
+import registro3 from '../assets/karen/registro3.png'
+import registro4 from '../assets/karen/registro4.png'
 
 import ScrollIndicator from '../components/scroll'
 
