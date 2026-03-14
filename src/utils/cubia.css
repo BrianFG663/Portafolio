@@ -120,3 +120,41 @@ h2 {
     position: relative;
     top: 15vh;
 }
+
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .contenedorClubia {
+    font-size: 0.9rem;
+  }
+
+  .contenedorClubia > span {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .plyr {
+    width: 90%;
+  }
+
+  .funcionalidades {
+    width: 90%;
+    top: 10vh;
+  }
+
+  .titulotres {
+    font-size: 1.8rem;
+    top: 10vh !important;
+  }
+
+  .contenedorClubia > .contenedorLenguajes > .cartaLenguajes {
+    width: 80%;
+    min-width: 250px;
+    min-height: 300px;
+  }
+
+  .contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
+    width: 80px;
+    height: 80px;
+    top: 1rem;
+  }
+}

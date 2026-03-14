@@ -115,4 +115,45 @@
   top: 10%;
 }
 
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .contenedorExperiencias {
+    top: 20rem;
+    width: 95%;
+    left: 2.5%;
+    gap: 3rem;
+  }
+
+  .tituloExperiencias {
+    font-size: 2rem;
+    top: 2vh;
+  }
+
+  .experiencias {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .experiencias > div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .experiencias p {
+    width: 90%;
+    padding-left: 0.2rem;
+  }
+
+  .experiencias > div > div {
+    gap: 1rem;
+    max-width: 300px;
+  }
+
+  .experiencias > div > div > img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 

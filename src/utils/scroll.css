@@ -46,3 +46,23 @@
     transparent
   );
 }
+
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .scroll-deco.right {
+    right: 20px;
+  }
+
+  .scroll-deco.left {
+    left: 20px;
+  }
+
+  .scroll-deco span {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .scroll-deco .line {
+    height: 400px;
+  }
+}

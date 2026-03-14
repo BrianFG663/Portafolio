@@ -66,5 +66,22 @@
   right: 50px;
 }
 
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .avatar-container {
+    width: 70%;
+    left: 15%;
+  }
+
+  .cara {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ceja {
+    height: 0.8rem;
+  }
+}
+
 
 

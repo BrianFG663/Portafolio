@@ -104,3 +104,37 @@
   color: #ef4444;
   transform: scale(1.1);
 }
+
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .carrusel-screenshots {
+    width: 90%;
+    margin: 2rem 0 5rem;
+  }
+
+  .carrusel-screenshots h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .marquee-img-large {
+    width: 50vw;
+    max-width: 300px;
+  }
+
+  .funcionalidades > .carrusel-screenshots > .marquee-wrapper > .marquee-track > .marquee-item > .marquee-img-large {
+    width: 60vw;
+    max-width: 400px;
+  }
+
+  .lightbox-img {
+    max-width: 98vw;
+    max-height: 96vh;
+  }
+
+  .btn-cerrar {
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+  }
+}

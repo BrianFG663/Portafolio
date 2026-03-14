@@ -61,3 +61,32 @@ svg {
     overflow: hidden;
 
 }
+
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .botones {
+    height: 3rem;
+    top: 4rem;
+    width: 80%;
+    left: 10%;
+  }
+
+  .botones a {
+    width: 18%;
+  }
+
+  .botones a:hover {
+    width: 20%;
+    height: 110%;
+  }
+
+  .botonHome {
+    top: 5px;
+    left: 5px;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}

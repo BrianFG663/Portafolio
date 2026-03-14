@@ -124,3 +124,48 @@ main{
     margin-bottom: 2vh;
 }
 
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    width: 90%;
+    left: 5%;
+    top: 8vh;
+  }
+
+  .contenedorInformacion {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contenedorFoto {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .lineas {
+    display: none; /* Hide decorative lines on mobile */
+  }
+
+  .botonesPersonales {
+    width: 90%;
+    left: 5%;
+    top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .botonConoceme, .botonProyectos {
+    width: 80%;
+    padding: 0.5rem;
+  }
+
+  .botonConoceme:hover, .botonProyectos:hover {
+    width: 85%;
+  }
+
+  .contenedorSobreMi {
+    top: 15rem;
+  }
+}
+

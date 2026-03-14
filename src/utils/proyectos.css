@@ -299,6 +299,48 @@
   height: 40%;
 }
 
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .contenedorProyecto {
+    top: 20rem;
+    gap: 3rem;
+    padding: 1rem 0;
+  }
+
+  .tituloProyectos {
+    font-size: 2rem;
+    top: 2vh;
+  }
+
+  .proyectos {
+    width: 95%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .proyecto {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .contenedorImagen,
+  .contenedorImagenMaquinaria,
+  .contenedorImagenMabra,
+  .contenedorImagenKaren,
+  .contenedorImagenClubia {
+    height: 20vh;
+  }
+
+  .conenedorInformacion {
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .conenedorInformacion p {
+    font-size: 0.9rem;
+  }
+}
+
 .lenguajes {
   height: 25%;
   display: flex;

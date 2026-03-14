@@ -20,3 +20,11 @@
   from { transform: translateY(0) rotate(0deg); }
   to   { transform: translateY(-20px) rotate(15deg); }
 }
+
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .simbolo {
+    font-size: 0.8rem; /* Smaller symbols on mobile */
+    animation-duration: 8s; /* Slower animation */
+  }
+}

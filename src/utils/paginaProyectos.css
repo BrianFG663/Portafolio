@@ -144,3 +144,49 @@ h2 {
     position: relative;
     top: -7vh !important;
 }
+
+/* Responsive styles for mobile and tablets */
+@media (max-width: 768px) {
+  .contenedorObra {
+    font-size: 0.9rem;
+  }
+
+  #seccionUno {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+  }
+
+  .contenedorObra > span {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .funcionalidades {
+    width: 90%;
+    top: 5vh;
+  }
+
+  .funcionalidades h2 {
+    font-size: 1.8rem;
+  }
+
+  .titulotres {
+    font-size: 1.8rem;
+  }
+
+  .contenedorObra > .contenedorLenguajes > .cartaLenguajes {
+    width: 80%;
+    min-width: 250px;
+    min-height: 300px;
+  }
+
+  .contenedorObra > .contenedorLenguajes > .cartaLenguajes div img {
+    width: 80px;
+    height: 80px;
+    top: 1rem;
+  }
+
+  #karen {
+    width: 90% !important;
+  }
+}

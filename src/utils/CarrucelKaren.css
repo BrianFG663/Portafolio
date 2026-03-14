@@ -129,3 +129,27 @@
   background: #ef4444;
   transform: scale(1.1);
 }
+
+/* Responsive styles for mobile */
+@media (max-width: 767px) {
+  .obr-alq-marquee-item {
+    width: 180px;
+    max-width: 200px;
+  }
+
+  .obr-alq-img {
+    max-height: 350px;
+  }
+
+  .obr-alq-carrusel h3 {
+    font-size: 1.4rem;
+  }
+
+  .obr-alq-btn-cerrar {
+    font-size: 36px;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 15px;
+  }
+}
