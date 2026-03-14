@@ -20,10 +20,10 @@ import ScrollIndicator from '../components/scroll'
 
 import inicio  from '../assets/clubia/inicio.PNG'
 import loginEmpleado  from '../assets/clubia/1loginEmpleado.PNG'
-import inicioEmpleado  from '../assets/clubia/1inicioEmpleado.png'
+import inicioEmpleado  from '../assets/clubia/1inicioEmpleado.PNG'
 import roles  from '../assets/clubia/1roles.PNG'
-import parametros  from '../assets/clubia/1parametros.png'
-import alertas  from '../assets/clubia/alertas.png'
+import parametros  from '../assets/clubia/1parametros.PNG'
+import alertas  from '../assets/clubia/alertas.PNG'
 
 import ventas  from '../assets/clubia/1ventas.png'
 import registroVentas  from '../assets/clubia/1registroVentas.png'
