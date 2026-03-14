@@ -26,7 +26,7 @@ import alumnosAceptados from '../assets/karen/1alumnosAceptados.PNG'
 
 import revision from '../assets/karen/3revision.PNG'
 import matriculaAceptada from '../assets/karen/3matriculaAceptada.PNG'
-import matriculaRechazada from '../assets/karen/3matriculaRechazada.PNG'
+import matriculaRechazada from '../assets/karen/3matriculaRechazada.png'
 import inicio from '../assets/karen/3inicio.PNG'
 import tarea from '../assets/karen/3tarea.jpg'
 
