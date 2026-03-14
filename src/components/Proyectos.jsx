@@ -1,6 +1,6 @@
 import React from 'react'
 import '../utils/proyectos.css'
-import asistencia from '../assets/logos/asistencia.png'
+import asistencia from '../assets/logos/Asistencia.png'
 import maquina from '../assets/logos/maquina.png'
 import mabra from '../assets/logos/mabra.png'
 import karen from '../assets/logos/karen.jpg'
