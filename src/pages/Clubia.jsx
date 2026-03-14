@@ -25,17 +25,17 @@ import roles  from '../assets/clubia/1roles.PNG'
 import parametros  from '../assets/clubia/1parametros.PNG'
 import alertas  from '../assets/clubia/alertas.PNG'
 
-import ventas  from '../assets/clubia/1ventas.png'
-import registroVentas  from '../assets/clubia/1registroVentas.png'
-import facturacion  from '../assets/clubia/1facturacion.png'
-import caja  from '../assets/clubia/1caja.png'
+import ventas  from '../assets/clubia/1ventas.PNG'
+import registroVentas  from '../assets/clubia/1registroVentas.PNG'
+import facturacion  from '../assets/clubia/1facturacion.PNG'
+import caja  from '../assets/clubia/1caja.PNG'
 
-import registroSocio  from '../assets/clubia/1registroSocio.png'
-import panelSocios  from '../assets/clubia/1panelSocios.png'
-import moderacion  from '../assets/clubia/1moderacion.png'
-import fotoCarnet  from '../assets/clubia/2fotoCarnet.png'
-import inicioSocio  from '../assets/clubia/2inicioSocio.png'
-import mail  from '../assets/clubia/mail.png'
+import registroSocio  from '../assets/clubia/1registroSocio.PNG'
+import panelSocios  from '../assets/clubia/1panelSocios.PNG'
+import moderacion  from '../assets/clubia/1moderacion.PNG'
+import fotoCarnet  from '../assets/clubia/2fotoCarnet.PNG'
+import inicioSocio  from '../assets/clubia/2inicioSocio.PNG'
+import mail  from '../assets/clubia/mail.PNG'
 
 const socioImages = [
   inicio,
