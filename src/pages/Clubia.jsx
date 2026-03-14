@@ -19,7 +19,7 @@ import nginx from '../assets/lenguajes/nginx.png'
 import ScrollIndicator from '../components/scroll'
 
 import inicio  from '../assets/clubia/inicio.PNG'
-import loginEmpleado  from '../assets/clubia/1loginEmpleado.png'
+import loginEmpleado  from '../assets/clubia/1loginEmpleado.PNG'
 import inicioEmpleado  from '../assets/clubia/1inicioEmpleado.png'
 import roles  from '../assets/clubia/1roles.png'
 import parametros  from '../assets/clubia/1parametros.png'
