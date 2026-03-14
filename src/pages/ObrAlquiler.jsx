@@ -26,7 +26,6 @@ import detalleMaquinas from '../assets/ObrAlquiler/1DetalleDeMaquinaria.PNG'
 import agregarMaquinas from '../assets/ObrAlquiler/1AgregarMaquinas.PNG'
 import edicionMaquinas from '../assets/ObrAlquiler/1EdicionDeMaquinaria.PNG'
 import historialMantenimiento from '../assets/ObrAlquiler/4HistorialDeMantenimientos.PNG'
-import mantenimientoPendiente from '../assets/ObrAlquiler/4MantenimientosPendientes.PNG'
 import detalleMantenimiento from '../assets/ObrAlquiler/4DetallesDeMantenimiento.PNG'
 import asignacion  from '../assets/ObrAlquiler/3asignacionesDeMaquinariasObras.PNG'
 import detalleAsignacion  from '../assets/ObrAlquiler/3DetalleAsignacion.PNG'
@@ -56,7 +55,6 @@ const maquinasMantenimiento = [
   detalleMaquinas,
   edicionMaquinas,
   historialMantenimiento,
-  mantenimientoPendiente,
   detalleMantenimiento
 ]
 
