@@ -20,7 +20,7 @@ import login from '../assets/karen/login.PNG'
 
 import aceptarAlumno from '../assets/karen/1aceptarAlumno.PNG'
 import menuAgregar from '../assets/karen/1menuAgregar.png'
-import agregarTarea from '../assets/karen/1agregarTarea.PNG'
+import agregarTarea from '../assets/karen/1agregarTarea.png'
 import alumnosAceptados from '../assets/karen/1alumnosAceptados.PNG'
 
 
