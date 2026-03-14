@@ -19,7 +19,7 @@ import agregarAdm from '../assets/asistencia/agregarAdm.PNG'
 import agregarProfesor from '../assets/asistencia/agregarProfesor.PNG'
 import agregarMateria from '../assets/asistencia/agregarMateria.PNG'
 import agregarInstituto from '../assets/asistencia/agregarInstituto.PNG'
-import inicioAdm from '../assets/asistencia/inicioAdm.png'
+import inicioAdm from '../assets/asistencia/InicioAdm.png'
 
 import parametros from '../assets/asistencia/parametros.PNG'
 import inicioProfesor from '../assets/asistencia/inicioProfesores.PNG'
