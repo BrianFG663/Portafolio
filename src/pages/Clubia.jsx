@@ -21,7 +21,7 @@ import ScrollIndicator from '../components/scroll'
 import inicio  from '../assets/clubia/inicio.PNG'
 import loginEmpleado  from '../assets/clubia/1loginEmpleado.PNG'
 import inicioEmpleado  from '../assets/clubia/1inicioEmpleado.png'
-import roles  from '../assets/clubia/1roles.png'
+import roles  from '../assets/clubia/1roles.PNG'
 import parametros  from '../assets/clubia/1parametros.png'
 import alertas  from '../assets/clubia/alertas.png'
 
