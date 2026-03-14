@@ -21,7 +21,7 @@ import agregarMateria from '../assets/asistencia/agregarMateria.PNG'
 import agregarInstituto from '../assets/asistencia/agregarInstituto.PNG'
 import inicioAdm from '../assets/asistencia/InicioAdm.PNG'
 
-import parametros from '../assets/asistencia/parametros.PNG'
+import parametros from '../assets/asistencia/parametroS.PNG'
 import inicioProfesor from '../assets/asistencia/inicioProfesores.PNG'
 import inicioMaterias from '../assets/asistencia/iniciomaterias.PNG'
 import inscripcionMaterias from '../assets/asistencia/inscripcionmaterias.PNG'
