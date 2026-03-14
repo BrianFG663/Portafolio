@@ -18,7 +18,7 @@ import apache from '../assets/lenguajes/apache.png'
 import nginx from '../assets/lenguajes/nginx.png'
 import ScrollIndicator from '../components/scroll'
 
-import inicio  from '../assets/clubia/inicio.png'
+import inicio  from '../assets/clubia/inicio.PNG'
 import loginEmpleado  from '../assets/clubia/1loginEmpleado.png'
 import inicioEmpleado  from '../assets/clubia/1inicioEmpleado.png'
 import roles  from '../assets/clubia/1roles.png'
