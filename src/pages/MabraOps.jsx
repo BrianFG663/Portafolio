@@ -11,7 +11,8 @@ import github from '../assets/lenguajes/github.png'
 import npm from '../assets/lenguajes/npm.png'
 import node from '../assets/lenguajes/node.png'
 
-import login from '../assets/mabra/Login.png'
+// Después (funciona en todos lados)
+import login from '../assets/mabra/Login.PNG'
 import registro from '../assets/mabra/Registro.png'
 import inicio from '../assets/mabra/inicio.png'
 import alertas from '../assets/mabra/alertas.jpg'
