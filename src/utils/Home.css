@@ -124,48 +124,166 @@ main{
     margin-bottom: 2vh;
 }
 
-/* Responsive styles for mobile and tablets */
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
-    width: 90%;
-    left: 5%;
-    top: 8vh;
-  }
+/* /* Tablets */
+@media (max-width: 992px) {
 
-  .contenedorInformacion {
-    width: 100%;
-    text-align: center;
-  }
+    .contenedor{
+        width: 90%;
+        left: 5%;
+        gap: 2rem;
+    }
 
-  .contenedorFoto {
-    width: 100%;
-    margin-top: 2rem;
-  }
+    .contenedorInformacion{
+        width: 55%;
+    }
 
-  .lineas {
-    display: none; /* Hide decorative lines on mobile */
-  }
+    .contenedorFoto{
+      display: none;
+        width: 45%;
+    }
 
-  .botonesPersonales {
-    width: 90%;
-    left: 5%;
-    top: 1rem;
-    flex-direction: column;
-    gap: 1rem;
-  }
+    .tituloNombre{
+        font-size: 2rem;
+    }
 
-  .botonConoceme, .botonProyectos {
-    width: 80%;
-    padding: 0.5rem;
-  }
+    .subTitulo{
+        font-size: 1.4rem;
+    }
 
-  .botonConoceme:hover, .botonProyectos:hover {
-    width: 85%;
-  }
+    .introduccion{
+        font-size: 1.1rem;
+    }
 
-  .contenedorSobreMi {
-    top: 15rem;
-  }
+    .botonesPersonales{
+        width: 90%;
+        left: 5%;
+    }
+
+    .lineas{
+        width: 55%;
+        left: 35%;
+    }
 }
 
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    .contenedor{
+        flex-direction: column-reverse;
+        width: 95%;
+        left: 2.5%;
+        top: 8vh;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .contenedorInformacion{
+        width: 100%;
+    }
+
+    .contenedorFoto{
+
+        width: 100%;
+        display: none;
+        justify-content: center;
+    }
+
+    .tituloNombre{
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+
+    .subTitulo{
+        font-size: 1.3rem;
+        white-space: normal;
+        bottom: 0;
+    }
+
+    .introduccion{
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .botonesPersonales{
+        width: 100%;
+        left: 0;
+        top: 1.5rem;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .botonConoceme,
+    .botonProyectos{
+        width: 45%;
+        padding: 0.8rem;
+    }
+
+    .botonConoceme:hover,
+    .botonProyectos:hover{
+        width: 45%;
+    }
+
+    .lineas{
+        display: none;
+    }
+}
+
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    .contenedor{
+        top: 5vh;
+    }
+
+    .tituloNombre{
+        font-size: 1.5rem;
+    }
+
+    .subTitulo{
+        font-size: 1.1rem;
+    }
+
+    .introduccion{
+        font-size: 0.95rem;
+    }
+
+    .botonesPersonales{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botonConoceme,
+    .botonProyectos{
+        width: 90%;
+    }
+
+    .botonConoceme:hover,
+    .botonProyectos:hover{
+        width: 90%;
+    }
+}
+
+
+/* Celulares muy pequeños (320px) */
+@media (max-width: 360px) {
+
+    .tituloNombre{
+        font-size: 1.3rem;
+    }
+
+    .subTitulo{
+        font-size: 1rem;
+    }
+
+    .introduccion{
+        font-size: 0.9rem;
+    }
+
+    .botonConoceme,
+    .botonProyectos{
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+}

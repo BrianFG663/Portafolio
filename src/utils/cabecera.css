@@ -61,7 +61,6 @@ header {
     transform: translateX(0);
     font-weight: 600;
     font-family: monospace;
-    
 }
 
 /* Responsive styles for mobile and tablets */
@@ -88,6 +87,10 @@ header {
   }
 
   .textoBoton {
-    font-size: 0.8rem;
+    display: none;
+  }
+
+  .botonesCabecera:hover .textoBoton{
+    display: none;
   }
 }

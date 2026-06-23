@@ -115,45 +115,114 @@
   top: 10%;
 }
 
-/* Responsive styles for mobile and tablets */
-@media (max-width: 768px) {
-  .contenedorExperiencias {
-    top: 20rem;
-    width: 95%;
-    left: 2.5%;
-    gap: 3rem;
-  }
 
-  .tituloExperiencias {
-    font-size: 2rem;
-    top: 2vh;
-  }
 
-  .experiencias {
-    flex-direction: column;
-    width: 100%;
-    padding: 0.5rem;
-  }
 
-  .experiencias > div {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+/* Tablets */
+@media (max-width: 992px) {
+    .experiencias {
+        width: 95%;
+        gap: 2rem;
+    }
 
-  .experiencias p {
-    width: 90%;
-    padding-left: 0.2rem;
-  }
+    .experiencias > div {
+        width: 30%;
+    }
 
-  .experiencias > div > div {
-    gap: 1rem;
-    max-width: 300px;
-  }
+    .experiencias p {
+        width: 68%;
+    }
 
-  .experiencias > div > div > img {
-    width: 50px;
-    height: 50px;
-  }
+    .experiencias > div > div > img {
+        width: 55px;
+        height: 55px;
+    }
 }
 
+/* Móviles */
+@media (max-width: 768px) {
 
+    .contenedorExperiencias {
+        width: 95%;
+        left: 2.5%;
+        gap: 3rem;
+        font-size: 1rem;
+    }
+
+    .tituloExperiencias {
+        font-size: 2rem;
+    }
+
+    .experiencias {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .experiencias > div {
+        width: 100%;
+    }
+
+    .experiencias > div > span {
+        height: auto;
+    }
+
+    .experiencias p {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #4a2c9e94;
+        padding-left: 0;
+        padding-top: 1rem;
+        margin: 0;
+    }
+
+    .experiencias > div > div {
+        top: 0;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .tecnologias {
+        top: 0;
+        margin-top: 0.5rem;
+    }
+
+    .experiencias > div > div > img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+    .contenedorExperiencias {
+      width: 100%;
+        top: 20rem;
+        font-size: 0.95rem;
+    }
+
+    .tituloExperiencias {
+        font-size: 1.7rem;
+    }
+
+    .experiencias {
+        padding: 1rem;
+    }
+
+    .experiencias > div > div {
+        gap: 0.75rem;
+    }
+
+    .experiencias > div > div > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .experiencias p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}

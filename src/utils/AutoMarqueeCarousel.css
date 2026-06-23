@@ -1,3 +1,7 @@
+/* ========================= */
+/* CARRUSEL                 */
+/* ========================= */
+
 .carrusel-screenshots {
   margin: 3rem 0 9rem;
   text-align: center;
@@ -8,10 +12,9 @@
   padding-bottom: 1rem;
 
   box-shadow: 
-  0 -20px 30px -20px rgba(0,0,0,0.2),
-  0 20px 30px -20px rgba(0,0,0,0.2);
+    0 -20px 30px -20px rgba(0,0,0,0.2),
+    0 20px 30px -20px rgba(0,0,0,0.2);
 }
-
 
 .funcionalidades > .carrusel-screenshots {
   width: 110%;
@@ -53,7 +56,7 @@
 }
 
 .funcionalidades > .carrusel-screenshots > .marquee-wrapper > .marquee-track > .marquee-item > .marquee-img-large {
-  width: 45;
+  width: 45vw;
   max-width: 650px;
 }
 
@@ -66,7 +69,10 @@
   to   { transform: translateX(-25%); }
 }
 
-/* Lightbox */
+/* ========================= */
+/* LIGHTBOX                 */
+/* ========================= */
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -75,13 +81,17 @@
   align-items: center;
   justify-content: center;
   z-index: 2000;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .lightbox-img {
-  max-width: 96vw;
-  max-height: 94vh;
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: 0 0 80px rgba(0,0,0,0.9);
 }
 
@@ -105,8 +115,12 @@
   transform: scale(1.1);
 }
 
-/* Responsive styles for mobile and tablets */
+/* ========================= */
+/* MOBILE (ROTACIÓN REAL)   */
+/* ========================= */
+
 @media (max-width: 768px) {
+
   .carrusel-screenshots {
     width: 90%;
     margin: 2rem 0 5rem;
@@ -114,7 +128,6 @@
 
   .carrusel-screenshots h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
   }
 
   .marquee-img-large {
@@ -122,14 +135,18 @@
     max-width: 300px;
   }
 
-  .funcionalidades > .carrusel-screenshots > .marquee-wrapper > .marquee-track > .marquee-item > .marquee-img-large {
-    width: 60vw;
-    max-width: 400px;
-  }
-
+  /* 🔥 ROTACIÓN FORZADA EN LIGHTBOX */
   .lightbox-img {
-    max-width: 98vw;
-    max-height: 96vh;
+    transform: rotate(90deg);
+    transform-origin: center center;
+
+    max-width: 90vh; /* ojo: invertido a propósito */
+    max-height: 90vw;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
   }
 
   .btn-cerrar {

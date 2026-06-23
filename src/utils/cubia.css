@@ -121,40 +121,98 @@ h2 {
     top: 15vh;
 }
 
-/* Responsive styles for mobile and tablets */
 @media (max-width: 768px) {
-  .contenedorClubia {
-    font-size: 0.9rem;
-  }
 
-  .contenedorClubia > span {
-    width: 80%;
-    font-size: 1rem;
-  }
+    #seccionUno{
+        bottom: 3vh;
+        text-align: center;
+        padding: 0 1rem;
+    }
 
-  .plyr {
-    width: 90%;
-  }
+    .contenedorClubia > span {
+        width: 90%;
+        bottom: 4vh;
+        font-size: 1rem;
+    }
 
-  .funcionalidades {
-    width: 90%;
-    top: 10vh;
-  }
+    .plyr {
+        width: 95%;
+    }
 
-  .titulotres {
-    font-size: 1.8rem;
-    top: 10vh !important;
-  }
+    .titulotres{
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
 
-  .contenedorClubia > .contenedorLenguajes > .cartaLenguajes {
-    width: 80%;
-    min-width: 250px;
-    min-height: 300px;
-  }
+    .contenedorClubia > .contenedorLenguajes{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        top: 10vh;
+    }
 
-  .contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
-    width: 80px;
-    height: 80px;
-    top: 1rem;
-  }
+    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes {
+        width: 90%;
+        min-width: unset;
+        min-height: unset;
+    }
+
+    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes > div {
+        gap: 1rem;
+    }
+
+    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .funcionalidades {
+        width: 95%;
+        top: 10vh;
+    }
+
+    .funcionalidades > h2{
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .funcionalidadesSeccion h3{
+        text-align: center;
+    }
+
+    .funcionalidadesSeccion{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #seccionUno{
+        font-size: 1.7rem;
+    }
+
+    .titulotres{
+        font-size: 1.5rem;
+    }
+
+    .contenedorClubia > span{
+        width: 95%;
+        font-size: 0.95rem;
+    }
+
+    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .funcionalidadesSeccion h3{
+        font-size: 1.1rem;
+    }
+
+    .funcionalidadesSeccion span{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }

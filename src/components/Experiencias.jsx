@@ -1,6 +1,8 @@
 import php from '../assets/lenguajes/php.png'
 import css from '../assets/lenguajes/css.png'
 import js from '../assets/lenguajes/js.png'
+import zoho from '../assets/lenguajes/zoho.png'
+import reactLogo from '../assets/lenguajes/react.png'
 import laravel from '../assets/lenguajes/laravel.png'
 import sql from '../assets/lenguajes/mysql.png'
 import git from '../assets/lenguajes/git.png'
@@ -49,6 +51,40 @@ export default function Experiencias() {
                     • Pruebas <strong>unitarias</strong>, de <strong>integración</strong>, de <strong>sistema</strong>, <strong>caja negra</strong> y <strong>caja blanca</strong>. <br /> 
                     • Participación en <strong>reuniones de relevamiento</strong> y <strong>validación de requerimientos</strong>. <br />
                     • <strong>Desarrollo completo de la aplicación web</strong>, abarcando desde el <strong>entorno local</strong> hasta el <strong>deploy en servidor</strong>, incluyendo la configuración del <strong>entorno</strong> de <strong>producción</strong>, clonación del <strong>repositorio</strong>, <strong>mantenimiento</strong> y <strong>actualización</strong> continua de la <strong>aplicación</strong>.
+                </span>
+            </p>
+        </div>
+        <div className='experiencias'>
+            <div>
+                <span>Enero 2026 - Actualidad </span>
+                <span className='tecnologias'>Tecnologias utilizadas </span>
+                <div>
+                    <img src={reactLogo} title='React' />
+                    <img src={css} title='CSS' />
+                    <img src={js} title='JavaScript' />
+                    <img src={github} title='GitHub' />
+                    <img src={zoho} title='Zoho-mail' />
+                    <img src={git} title='Git' />
+                    <img src={nginx} title='Nginx' />
+                    <img src={terminal} title='Terminal Linux (Ubuntu)' />
+                </div>
+            </div>
+            <p>
+                <strong>SITIO WEB INSTITUCIONAL</strong> <br />
+                <span><strong>Asociación de Profesionales de Servicio Social (APSS)</strong></span> <br />
+                <span>
+                    Desarrollo, implementación y mantenimiento del sitio web institucional de APSS, con el objetivo de modernizar la presencia digital de la organización y facilitar la difusión de noticias, actividades, documentos e información para sus afiliados.
+                </span> <br /> <br />
+                
+                <span>
+                   • Desarrollo de la interfaz utilizando <strong>React (JSX)</strong>, <strong>JavaScript</strong> y <strong>CSS</strong>. <br/>
+                    • Diseño e implementación de una experiencia <strong>responsive</strong> para dispositivos móviles y escritorio. <br/>
+                    • Configuración, despliegue y administración del entorno de producción en <strong>Linux Ubuntu</strong>. <br/>
+                    • Implementación y gestión de servicios mediante <strong>Node.js</strong>. <br/>
+                    • Migración del sitio web manteniendo el <strong>dominio existente</strong> hacia una nueva infraestructura de <strong>hosting</strong>. <br/>
+                    • Configuración y administración de correo corporativo mediante <strong>Zoho Mail</strong>. <br/>
+                    • Resolución de incidencias relacionadas con <strong>hosting</strong>, <strong>SSL</strong>, <strong>dominio</strong> y servicios web. <br/>
+                    • Mantenimiento, actualización e implementación de <strong>nuevas funcionalidades</strong> en la plataforma.
                 </span>
             </p>
         </div>
