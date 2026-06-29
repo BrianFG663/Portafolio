@@ -168,10 +168,10 @@ export default function Proyectos(){
             <div className='lenguajes'>
               <img src={kotlin} title='Kotlin + Java'/>
               <img src={jetpack} title='Jetpack compose'/>
-              <img src={ngrok} title='Ngrok'/>
               <img src={node} title='Node.js'/>
               <img src={tipe} title='TypeScript'/>
               <img src={sql} title='MySql'/>
+              <img src={ngrok} title='Ngrok'/>
             </div>
           </div>
         </div>
