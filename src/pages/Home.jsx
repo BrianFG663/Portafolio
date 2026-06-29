@@ -30,8 +30,9 @@ export default function Home(){
   }, [texto])
 
   return(
+
     
-    <main>
+    <>
       <Cabecera></Cabecera>
       <div className='contenedor' id='Inicio'>
         <img src={lineas} className='lineas' />
@@ -59,7 +60,7 @@ export default function Home(){
       <Proyectos></Proyectos>
   
       
-    </main>
+    </>
     
     )
 }

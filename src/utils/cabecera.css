@@ -68,7 +68,10 @@ header {
   header {
     width: 90%;
     height: 2.5rem;
-    padding: 0 0.5rem;
+    border-radius: 0%;
+    top: 0%;
+    left: 0%;
+    transform: translateX(-0%);
   }
 
   .botonesCabecera {
