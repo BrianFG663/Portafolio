@@ -166,8 +166,8 @@ export default function Proyectos(){
               <strong>Aplicación móvil de gestión académica</strong> para <strong>instituciones educativas</strong> que permite a <strong>administradores</strong>, <strong>docentes</strong> y <strong>alumnos</strong> gestionar <strong>materias</strong>, clases y <strong>tareas</strong> de forma <strong>simple</strong>, <strong>organizada</strong> y <strong>eficiente</strong>.
             </p>
             <div className='lenguajes'>
-              <img src={kotlin} title='Kotlin + Java'/>
               <img src={jetpack} title='Jetpack compose'/>
+              <img src={kotlin} title='Kotlin + Java'/>
               <img src={node} title='Node.js'/>
               <img src={tipe} title='TypeScript'/>
               <img src={sql} title='MySql'/>
