@@ -1,87 +1,494 @@
 .avatar-container {
+  --avatar-move-x: 0px;
+  --avatar-move-y: 0px;
+
   position: relative;
-  width: 55%;
-  left: 10%;
-  height: auto;
-  z-index: 100;
+  width: min(100%, 560px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+
+  transform: translate(
+    var(--avatar-move-x),
+    var(--avatar-move-y)
+  );
+
+  transition: transform 0.35s ease-out;
 }
 
-.avatar-base {
-  width: 100%;
-  height: auto;
-  display: block;
-  z-index: 100;
+
+/* ============================================================
+   HALO
+   ============================================================ */
+
+.avatar-halo {
+  position: absolute;
+
+  width: 78%;
+  height: 78%;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(75, 44, 158, 0.12);
+
+  box-shadow:
+    0 0 0 25px rgba(75, 44, 158, 0.025),
+    0 0 0 50px rgba(136, 222, 251, 0.025);
+
+  pointer-events: none;
+
+  animation: avatarHaloPulse 6s ease-in-out infinite;
 }
+
+
+/* ============================================================
+   GLOW
+   ============================================================ */
+
+.avatar-glow {
+  position: absolute;
+
+  width: 58%;
+  height: 58%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(136, 222, 251, 0.28) 0%,
+      rgba(75, 44, 158, 0.12) 45%,
+      rgba(75, 44, 158, 0) 72%
+    );
+
+  filter: blur(18px);
+
+  pointer-events: none;
+
+  animation: avatarGlowPulse 4s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   AVATAR
+   ============================================================ */
+
+.avatar-base {
+  position: relative;
+
+  width: 72%;
+  height: auto;
+
+  display: block;
+
+  z-index: 4;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  filter:
+    drop-shadow(
+      0 18px 25px rgba(17, 24, 87, 0.12)
+    );
+}
+
+
+/* ============================================================
+   OJOS
+   ============================================================ */
 
 .ojos {
   position: absolute;
-  top: 40.3%;   /* ajustá según tu avatar */
+
+  top: 40.3%;
   left: 48.4%;
-  width: 52%;
+
+  /*
+    Este es el tamaño general de la zona de los ojos.
+    Se mantiene en 37% para conservar la proporción anterior.
+  */
+  width: 37%;
+
   transform: translate(-50%, -50%);
+
   display: flex;
-    justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
+
+  z-index: 7;
+
+  pointer-events: none;
 }
 
+
+/*
+  El wrapper solamente se utiliza para el parpadeo.
+  No modifica el tamaño visual del ojo.
+*/
+.ojo-wrapper {
+  width: 17%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-origin: center;
+}
+
+
+/*
+  El SVG ocupa todo el wrapper.
+  Esto mantiene el tamaño equivalente al ojo original.
+*/
 .ojo {
+  --ojo-x: 0px;
+  --ojo-y: 0px;
+
+  width: 100%;
+  height: auto;
+
   overflow: visible;
-    width: 17%;
-    height: auto;
+
+  transform:
+    translate(
+      var(--ojo-x),
+      var(--ojo-y)
+    );
+
+  transform-origin: center;
+
+  transition:
+    transform 0.12s ease-out;
+
+  display: block;
 }
 
 
-.cara {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background: transparent;
-  border-radius: 50%;
+/* ============================================================
+   PARPADEO
+   ============================================================ */
+
+/*
+  El parpadeo se aplica al wrapper y NO al SVG.
+
+  De esta forma:
+  - el ojo puede seguir al cursor
+  - el parpadeo no modifica --ojo-x / --ojo-y
+  - al abrirse vuelve exactamente a donde estaba mirando
+*/
+
+.ojo-wrapper.avatar-parpadeo {
+  animation:
+    avatarParpadeo 260ms ease-in-out;
 }
+
+
+@keyframes avatarParpadeo {
+
+  0% {
+    transform: scaleY(1);
+  }
+
+  35% {
+    transform: scaleY(0.12);
+  }
+
+  55% {
+    transform: scaleY(0.08);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+/* ============================================================
+   CEJAS
+   ============================================================ */
 
 .cejas {
   position: absolute;
-  top: 31%; 
-  left: 48.5%;
+
+  top: 31.5%;
+  left: 48.4%;
+
+  /*
+    Se mantiene relativamente estrecho para que
+    las cejas queden cerca entre sí.
+  */
+  width: 25%;
+
   transform: translateX(-50%);
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 40%;
+
+  z-index: 8;
+
+  pointer-events: none;
 }
+
 
 .ceja {
-  width: 35%;
-  height: 1rem;
+  width: 28%;
+  height: 0.48rem;
+
   background: #4b2c9e;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
+
+  border-radius: 999px;
+
+  transition:
+    transform 0.35s ease,
+    border-radius 0.35s ease;
 }
+
 
 .ceja-izq {
-  top: 50px;
-  left: 50px;
+  transform-origin: right center;
 }
+
 
 .ceja-der {
-  top: 50px;
-  right: 50px;
+  transform-origin: left center;
 }
 
-/* Responsive styles for mobile and tablets */
-@media (max-width: 768px) {
-  .avatar-container {
-    width: 70%;
-    left: 15%;
+
+/* ============================================================
+   DECORACIÓN
+   ============================================================ */
+
+.avatar-decoracion {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.avatar-decoracion-1 {
+  top: 11%;
+  left: 10%;
+
+  border-top:
+    2px solid rgba(75, 44, 158, 0.45);
+
+  border-left:
+    2px solid rgba(75, 44, 158, 0.45);
+}
+
+
+.avatar-decoracion-2 {
+  top: 11%;
+  right: 10%;
+
+  border-top:
+    2px solid rgba(136, 222, 251, 0.7);
+
+  border-right:
+    2px solid rgba(136, 222, 251, 0.7);
+}
+
+
+.avatar-decoracion-3 {
+  bottom: 11%;
+  left: 10%;
+
+  border-bottom:
+    2px solid rgba(136, 222, 251, 0.7);
+
+  border-left:
+    2px solid rgba(136, 222, 251, 0.7);
+}
+
+
+.avatar-decoracion-4 {
+  bottom: 11%;
+  right: 10%;
+
+  border-bottom:
+    2px solid rgba(75, 44, 158, 0.45);
+
+  border-right:
+    2px solid rgba(75, 44, 158, 0.45);
+}
+
+
+/* ============================================================
+   ANIMACIÓN DEL HALO
+   ============================================================ */
+
+@keyframes avatarHaloPulse {
+
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
   }
 
-  .cara {
-    width: 150px;
-    height: 150px;
+  50% {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+}
+
+
+/* ============================================================
+   ANIMACIÓN DEL GLOW
+   ============================================================ */
+
+@keyframes avatarGlowPulse {
+
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+  .avatar-container {
+    width: min(100%, 500px);
+  }
+
+  .avatar-base {
+    width: 74%;
+  }
+
+  .avatar-decoracion {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* ============================================================
+   TABLET PEQUEÑA
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+  .avatar-container {
+    width: min(100%, 440px);
+  }
+
+  .avatar-base {
+    width: 72%;
+  }
+
+  .avatar-halo {
+    width: 76%;
+    height: 76%;
+  }
+
+  .avatar-decoracion {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+/* ============================================================
+   MÓVIL
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .avatar-container {
+    width: min(100%, 360px);
+  }
+
+  .avatar-base {
+    width: 70%;
+  }
+
+  .avatar-halo {
+    width: 74%;
+    height: 74%;
+  }
+
+  .avatar-glow {
+    width: 55%;
+    height: 55%;
+  }
+
+  .avatar-decoracion {
+    width: 26px;
+    height: 26px;
+  }
+
+  .ojos {
+    width: 37%;
+  }
+
+  .cejas {
+    width: 31%;
+  }
+}
+
+
+/* ============================================================
+   MÓVILES PEQUEÑOS
+   ============================================================ */
+
+@media (max-width: 380px) {
+
+  .avatar-container {
+    width: min(100%, 300px);
+  }
+
+  .avatar-decoracion {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+/* ============================================================
+   REDUCIR MOVIMIENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .avatar-container {
+    transition: none;
+  }
+
+  .avatar-halo,
+  .avatar-glow {
+    animation: none;
+  }
+
+  .ojo {
+    transition: none;
+  }
+
+  .ojo-wrapper.avatar-parpadeo {
+    animation: none;
   }
 
   .ceja {
-    height: 0.8rem;
+    transition: none;
   }
 }
-
-
-

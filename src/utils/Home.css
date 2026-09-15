@@ -1,293 +1,704 @@
 
-main{
+main {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #f2f9fb;
+  overflow-x: hidden;
 }
 
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    position: relative;
-    z-index: 0;
-    left: 15%;
-    top: 12vh;
-    align-items: center;
-    justify-content: center;
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 5rem 7% 6rem;
+  box-sizing: border-box;
 }
 
-.contenedorInformacion{
-    width: 45%;
-    position: relative;
-    z-index: 2;
-    font-family: monospace;
+
+/* =========================================================
+   DECORACIÓN
+========================================================= */
+
+.heroDecoracion {
+  position: absolute;
+  width: min(520px, 45vw);
+  height: auto;
+  right: 3%;
+  top: 16%;
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
-.tituloNombre{
-    color: #111857;
-    width: 100%;
-    font-weight: 100;
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.heroContenido {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(400px, 0.95fr);
+  align-items: center;
+  gap: 4rem;
+
+  position: relative;
+  z-index: 2;
 }
 
-.tituloNombre strong{
-    font-weight: 600;
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.heroTexto {
+  max-width: 720px;
+  font-family: monospace;
 }
 
- /* subtitulo y efecto */
 
-.subTitulo{
-    color: #111857;
-    white-space: pre;
-    position: relative;
-    bottom: 1rem;
+/* Pequeña etiqueta superior */
+
+.heroEtiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  color: #4b2c9e;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  margin-bottom: 1.2rem;
 }
 
-.subTitulo strong{
-    font-weight: 600;
+.heroEtiqueta::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background-color: #4b2c9e;
 }
+
+
+/* =========================================================
+   NOMBRE
+========================================================= */
+
+.tituloNombre {
+  margin: 0;
+
+  color: #111857;
+
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.nombre {
+  display: block;
+
+  margin-top: 0.35rem;
+
+  color: #111857;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
+
+.subTituloWrapper {
+  min-height: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.subTitulo {
+  display: inline-block;
+
+  margin: 0;
+
+  color: #4b2c9e;
+
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+
+/* Cursor */
 
 .cursor {
   display: inline-block;
-  width: 1ch;              
-  background-color: transparent; 
-  margin-left: 2px;
+
+  margin-left: 3px;
+
+  color: #4b2c9e;
+
   animation: blink 1s step-start infinite;
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  50.01%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  50.01%,
+  100% {
+    opacity: 0;
+  }
 }
 
-/* --- */
 
-.introduccion{
-    color: #384481;
-    font-weight: 100;
-    width: 100%;
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.introduccion {
+  max-width: 680px;
+
+  margin: 1.7rem 0 0;
+
+  color: #384481;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
 .introduccion strong {
-    font-weight: 600;
+  color: #111857;
+  font-weight: 650;
 }
 
-.contenedorFoto{
-    width: 55%;
-    position: relative;
-    z-index: 2;
+
+.introduccionSecundaria {
+  max-width: 620px;
+
+  margin: 0.55rem 0 0;
+
+  color: #59628a;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-.lineas{
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.botonesPersonales {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 2.3rem;
+}
+
+
+.botonConoceme,
+.botonProyectos {
+  min-width: 175px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 0.9rem 1.25rem;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.botonConoceme {
+  background-color: #111857;
+  border: 2px solid #111857;
+
+  color: #ffffff;
+
+  box-shadow: 0 8px 22px rgba(17, 24, 87, 0.14);
+}
+
+
+.botonProyectos {
+  background-color: transparent;
+  border: 2px solid #111857;
+
+  color: #111857;
+}
+
+
+.botonConoceme:hover,
+.botonProyectos:hover {
+  transform: translateY(-3px);
+}
+
+
+.botonConoceme:hover {
+  background-color: #1a236f;
+
+  box-shadow: 0 12px 28px rgba(17, 24, 87, 0.2);
+}
+
+
+.botonProyectos:hover {
+  background-color: rgba(17, 24, 87, 0.05);
+}
+
+
+.botonFlecha {
+  font-size: 1.15rem;
+
+  transition: transform 0.25s ease;
+}
+
+
+.botonConoceme:hover .botonFlecha,
+.botonProyectos:hover .botonFlecha {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   VISUAL / AVATAR
+========================================================= */
+
+.heroVisual {
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+
+.heroMarco {
+  width: min(430px, 90%);
+  aspect-ratio: 1 / 1;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Marco muy sutil */
+
+.heroMarco::before {
+  content: "";
+
   position: absolute;
-  top: 14rem;
-  left: 40%;
-  width: 45%;
-  height: 15rem;
-  z-index: 1;
-  opacity: 0.05;
-  pointer-events: none; /* no bloquea clics ni interacciones */
+  inset: 7%;
+
+  border: 1px solid rgba(17, 24, 87, 0.12);
+
+  border-radius: 50%;
 }
 
-.botonesPersonales{
-    display: flex;
-    width: 70%;
-    position: relative;
-    top: 2.5rem;
-    left: 15%;
-    flex-direction: row;
-    justify-content: space-around;
+
+.heroMarco::after {
+  content: "";
+
+  position: absolute;
+  width: 75%;
+  height: 75%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(136, 222, 251, 0.2) 0%,
+      rgba(75, 44, 158, 0.07) 45%,
+      transparent 72%
+    );
+
+  filter: blur(8px);
+
+  z-index: -1;
 }
 
-.botonConoceme, .botonProyectos{
-    background-color: transparent;
-    border: 2px solid #111857;
-    border-radius: 4px;
+
+/* Líneas decorativas del marco */
+
+.heroMarcoLinea {
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+
+  border-color: rgba(17, 24, 87, 0.5);
+  border-style: solid;
+
+  pointer-events: none;
+}
+
+
+.heroMarcoLineaSuperior {
+  top: 0;
+  right: 0;
+
+  border-width: 2px 2px 0 0;
+}
+
+
+.heroMarcoLineaInferior {
+  bottom: 0;
+  left: 0;
+
+  border-width: 0 0 2px 2px;
+}
+
+
+/* Avatar */
+
+.avatarContainer {
+  width: 82%;
+  height: 82%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   INDICADOR
+========================================================= */
+
+.heroIndicador {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  margin-top: 1rem;
+
+  color: #59628a;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  font-size: 0.82rem;
+}
+
+
+.heroIndicadorPunto {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background-color: #008f4a;
+
+  box-shadow: 0 0 0 4px rgba(0, 143, 74, 0.08);
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.heroScroll {
+  position: absolute;
+
+  left: 7%;
+  bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: #7b82a1;
+
+  font-family: monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+
+  opacity: 0.8;
+}
+
+
+.heroScrollLinea {
+  width: 45px;
+  height: 1px;
+
+  background-color: #7b82a1;
+}
+
+
+/* =========================================================
+   SOBRE MI
+========================================================= */
+
+.seccionSobreMi {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 0;
+
+  padding: 7rem 7%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .heroContenido {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    gap: 2rem;
+  }
+
+  .tituloNombre {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+  }
+
+  .heroVisual {
+    min-height: 420px;
+  }
+
+  .heroScroll {
+    left: 5%;
+  }
+}
+
+
+/* =========================================================
+   TABLETS PEQUEÑAS
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero {
+    min-height: auto;
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .heroContenido {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .heroTexto {
+    max-width: 720px;
+    margin: 0 auto;
+
     text-align: center;
-    text-decoration: inherit;
-    color: #111857;
-    padding: 0.7rem;
-    width: 40%;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s all;
-    gap: 1rem;
-}
+  }
 
-.botonConoceme:hover, .botonProyectos:hover{
-    width: 44%;
-}
+  .heroEtiqueta {
+    justify-content: center;
+  }
 
-.contenedorSobreMi{
-    position: relative;
-    top: 20rem;
-    margin-bottom: 2vh;
-    padding: 0;
-}
+  .heroEtiqueta::before {
+    display: none;
+  }
 
-/* /* Tablets */
-@media (max-width: 992px) {
+  .tituloNombre {
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+  }
 
-    .contenedor{
-        width: 90%;
-        left: 5%;
-        gap: 2rem;
-    }
+  .introduccion,
+  .introduccionSecundaria {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .contenedorInformacion{
-        width: 55%;
-    }
+  .botonesPersonales {
+    justify-content: center;
+  }
 
-    .contenedorFoto{
-      display: none;
-        width: 45%;
-    }
+  .heroVisual {
+    min-height: auto;
+  }
 
-    .tituloNombre{
-        font-size: 2rem;
-    }
+  .heroMarco {
+    width: min(360px, 75vw);
+  }
 
-    .subTitulo{
-        font-size: 1.4rem;
-    }
+  .heroScroll {
+    display: none;
+  }
 
-    .introduccion{
-        font-size: 1.1rem;
-    }
+  .heroDecoracion {
+    width: 70vw;
+    right: -15%;
+    top: 20%;
+  }
 
-    .botonesPersonales{
-        width: 90%;
-        left: 5%;
-    }
-
-    .lineas{
-        width: 55%;
-        left: 35%;
-    }
+  .seccionSobreMi {
+    padding-top: 5rem;
+  }
 }
 
 
-/* Celulares */
-@media (max-width: 768px) {
+/* =========================================================
+   CELULARES
+========================================================= */
 
-    .contenedor{
-        flex-direction: column-reverse;
-        width: 95%;
-        left: 2.5%;
-        top: 8vh;
-        text-align: center;
-        gap: 2rem;
-    }
+@media (max-width: 600px) {
 
-    .contenedorInformacion{
-        width: 100%;
-    }
+  .hero {
+    padding: 4rem 6% 4.5rem;
+  }
 
-    .contenedorFoto{
+  .heroContenido {
+    gap: 2rem;
+  }
 
-        width: 100%;
-        display: none;
-        justify-content: center;
-    }
+  .heroEtiqueta {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
 
-    .tituloNombre{
-        font-size: 1.8rem;
-        line-height: 1.4;
-    }
+  .tituloNombre {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+    line-height: 1.15;
+  }
 
-    .subTitulo{
-        font-size: 1.3rem;
-        white-space: normal;
-        bottom: 0;
-    }
+  .nombre {
+    margin-top: 0.45rem;
+  }
 
-    .introduccion{
-        font-size: 1rem;
-        line-height: 1.7;
-    }
+  .subTituloWrapper {
+    min-height: auto;
+    margin-top: 1.25rem;
+  }
 
-    .botonesPersonales{
-        width: 100%;
-        left: 0;
-        top: 1.5rem;
-        gap: 1rem;
-        justify-content: center;
-    }
+  .subTitulo {
+    font-size: 1.1rem;
+  }
 
-    .botonConoceme,
-    .botonProyectos{
-        width: 45%;
-        padding: 0.8rem;
-    }
+  .introduccion {
+    margin-top: 1.4rem;
 
-    .botonConoceme:hover,
-    .botonProyectos:hover{
-        width: 45%;
-    }
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
 
-    .lineas{
-        display: none;
-    }
+  .introduccionSecundaria {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .botonesPersonales {
+    width: 100%;
+
+    flex-direction: column;
+
+    margin-top: 2rem;
+  }
+
+  .botonConoceme,
+  .botonProyectos {
+    width: 100%;
+    max-width: 320px;
+
+    box-sizing: border-box;
+  }
+
+  .heroVisual {
+    display: none;
+  }
+
+  .heroDecoracion {
+    display: none;
+  }
+
+  .seccionSobreMi {
+    padding: 4rem 6%;
+  }
 }
 
 
-/* Celulares pequeños */
-@media (max-width: 480px) {
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
 
-    .contenedor{
-        top: 5vh;
-    }
+@media (max-width: 380px) {
 
-    .tituloNombre{
-        font-size: 1.5rem;
-    }
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
-    .subTitulo{
-        font-size: 1.1rem;
-    }
+  .tituloNombre {
+    font-size: 1.75rem;
+  }
 
-    .introduccion{
-        font-size: 0.95rem;
-    }
+  .subTitulo {
+    font-size: 1rem;
+  }
 
-    .botonesPersonales{
-        flex-direction: column;
-        align-items: center;
-    }
+  .introduccion {
+    font-size: 0.92rem;
+  }
 
-    .botonConoceme,
-    .botonProyectos{
-        width: 90%;
-    }
+  .introduccionSecundaria {
+    font-size: 0.88rem;
+  }
 
-    .botonConoceme:hover,
-    .botonProyectos:hover{
-        width: 90%;
-    }
+  .botonConoceme,
+  .botonProyectos {
+    max-width: 100%;
+  }
 }
-
-
-/* Celulares muy pequeños (320px) */
-@media (max-width: 360px) {
-
-    .tituloNombre{
-        font-size: 1.3rem;
-    }
-
-    .subTitulo{
-        font-size: 1rem;
-    }
-
-    .introduccion{
-        font-size: 0.9rem;
-    }
-
-    .botonConoceme,
-    .botonProyectos{
-        font-size: 0.9rem;
-        padding: 0.7rem;
-    }
-}
-
-
 

@@ -1,218 +1,853 @@
-.contenedorClubia {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #111857;
-    font-family: monospace;
-    font-size: 1rem;
-    border: 1px solid green;
-    font-weight: 100;
-}
 
-strong {
-    font-weight: 600;
-}
+/* ============================================================
+   CLUBIA
+   Página individual del proyecto
+   Estilo visual basado en FITAR
+   ============================================================ */
 
-#seccionUno{
-    position: relative;
-    bottom: 7vh;
-}
+.clubia-page {
+  --clubia-primary: #111857;
+  --clubia-secondary: #4b2c9e;
+  --clubia-accent: #88defb;
+  --clubia-dark: #0f0f0f;
+  --clubia-text: #111857;
+  --clubia-muted: rgba(17, 24, 87, 0.58);
+  --clubia-border: rgba(17, 24, 87, 0.1);
 
-h2 {
-    font-weight: 100;
-}
-
-.contenedorClubia>span {
-    width: 50%;
-    font-size: 1.2rem;
-    text-align: center;
-    position: relative;
-    bottom: 8vh;
-}
-
-.plyr {
-    border: 2px solid #2f356b;
-    --plyr-color-main: #2f356b;
-    width: 55%;
-    position: relative;
-    bottom: 2vh;
-}
-
-.funcionalidades {
-    position: relative;
-    top: 15vh;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.funcionalidadesSeccion {
-    margin-bottom: 3rem;
-    background-color: white;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(136, 222, 251, 0.4);
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.funcionalidadesSeccion:hover {
-    transform: scale(1.01);
-    border-left: 2px solid #4b2c9e;
-    border-right: 2px solid #4b2c9e;
-}
-
-.funcionalidadesSeccion > h3 {
-    color: #4b2c9e;
-    font-weight: 600;
-}
-
-
-.titulotres{
-    position: relative;
-    top: 13vh !important;
-    font-size: 2.2rem;
-}
-
-.contenedorClubia > .contenedorLenguajes{
-    margin-bottom: 5rem;
-    position: relative;
-    top: 0vh;
-}
-
-.contenedorClubia > .contenedorLenguajes > .cartaLenguajes {
-  width: 30%;
-  min-width: 300px;
-  height: auto;
-  min-height: 400px;
-}
-
-.contenedorClubia > .contenedorLenguajes > .cartaLenguajes>div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  max-width: 400px;
-}
-
-.contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
-  width: 110px;
   position: relative;
-  top: 2rem;
-  height: 110px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: var(--clubia-text);
+}
+
+/* ============================================================
+   ELEMENTOS GENERALES
+   ============================================================ */
+
+.clubia-page *,
+.clubia-page *::before,
+.clubia-page *::after {
+  box-sizing: border-box;
+}
+
+.clubia-page strong {
+  color: var(--clubia-secondary);
+  font-weight: 700;
+}
+
+.clubia-cursor {
+  display: inline-block;
+  margin-left: 0.15rem;
+  color: var(--clubia-accent);
+  font-weight: 400;
+  animation: clubiaCursor 1s steps(1) infinite;
+}
+
+@keyframes clubiaCursor {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.clubia-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 9rem 7% 7rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+
+  background:
+    radial-gradient(
+      circle at 82% 28%,
+      rgba(136, 222, 251, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 10% 75%,
+      rgba(75, 44, 158, 0.05),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+/* ------------------------------------------------------------
+   Decoración lateral
+   ------------------------------------------------------------ */
+
+.clubia-hero::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 4%;
+
+  width: 1px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(17, 24, 87, 0.08) 20%,
+    rgba(17, 24, 87, 0.08) 80%,
+    transparent
+  );
+}
+
+.clubia-hero::after {
+  content: "CLUBIA";
+
+  position: absolute;
+  right: -2.8rem;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(90deg);
+
+  color: rgba(17, 24, 87, 0.035);
+
+  font-size: clamp(5rem, 12vw, 11rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------
+   Contenido del hero
+   ------------------------------------------------------------ */
+
+.clubia-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 100%);
+}
+
+.clubia-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--clubia-secondary);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.clubia-eyebrow::before {
+  content: "";
+
+  width: 2.2rem;
+  height: 1px;
+
+  background: var(--clubia-accent);
+}
+
+.clubia-hero-title {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: var(--clubia-primary);
+
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+
+.clubia-hero-title strong {
+  display: block;
+  color: var(--clubia-secondary);
+}
+
+.clubia-hero-description {
+  max-width: 760px;
+
+  margin: 2.4rem 0 0;
+
+  color: var(--clubia-muted);
+
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.8;
+}
+
+.clubia-hero-description strong {
+  color: var(--clubia-primary);
+}
+
+.clubia-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.7rem;
+
+  margin-top: 2rem;
+}
+
+.clubia-hero-tags span {
+  padding: 0.65rem 1rem;
+
+  border: 1px solid rgba(75, 44, 158, 0.12);
+  border-radius: 999px;
+
+  background: rgba(75, 44, 158, 0.035);
+
+  color: var(--clubia-secondary);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   VIDEO / SHOWCASE
+   ============================================================ */
+
+.clubia-video-wrapper {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 2rem;
+
+  border: 1px solid var(--clubia-border);
+
+  background: #fafbfe;
+
+  box-shadow:
+    0 25px 80px rgba(17, 24, 87, 0.08),
+    0 4px 15px rgba(17, 24, 87, 0.03);
+}
+
+.clubia-video-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding: 0.5rem 0 1.5rem;
+}
+
+.clubia-video-label {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: var(--clubia-secondary);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.clubia-video-header h2 {
+  margin: 0;
+
+  color: var(--clubia-primary);
+
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.clubia-video-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.55rem;
+
+  padding: 0.55rem 0.8rem;
+
+  border: 1px solid rgba(136, 222, 251, 0.4);
+  border-radius: 999px;
+
+  color: var(--clubia-primary);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.clubia-video-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--clubia-accent);
+
+  box-shadow:
+    0 0 0 4px rgba(136, 222, 251, 0.12);
+}
+
+.clubia-video {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(17, 24, 87, 0.06);
+
+  background: #ffffff;
+}
+
+.clubia-video .plyr {
+  --plyr-color-main: #4b2c9e;
+
+  width: 100%;
+
+  border: none;
+}
+
+/* ============================================================
+   ENCABEZADOS DE SECCIÓN
+   ============================================================ */
+
+.clubia-section-heading {
+  width: min(850px, 100%);
+
+  margin: 0 auto 4rem;
+
+  text-align: center;
+}
+
+.clubia-section-heading > span {
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--clubia-secondary);
+
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.clubia-section-heading h2 {
+  margin: 0;
+
+  color: var(--clubia-primary);
+
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.clubia-section-heading h2 strong {
+  color: var(--clubia-secondary);
+}
+
+.clubia-section-heading p {
+  max-width: 680px;
+
+  margin: 1.4rem auto 0;
+
+  color: var(--clubia-muted);
+
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   TECNOLOGÍAS
+   ============================================================ */
+
+.clubia-tech-section {
+  width: 100%;
+
+  padding: 8rem 7%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f9fd 50%,
+      #ffffff 100%
+    );
+}
+
+.clubia-tech-grid {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1.5rem;
+}
+
+.clubia-tech-card {
+  position: relative;
+
+  min-height: 240px;
+
+  padding: 2rem;
+
+  border: 1px solid var(--clubia-border);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(17, 24, 87, 0.045);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.clubia-tech-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(75, 44, 158, 0.2);
+
+  box-shadow:
+    0 20px 45px rgba(17, 24, 87, 0.08);
+}
+
+.clubia-tech-card-header {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  padding-bottom: 1.4rem;
+
+  border-bottom:
+    1px solid rgba(17, 24, 87, 0.08);
+}
+
+.clubia-tech-number {
+  flex-shrink: 0;
+
+  color: var(--clubia-accent);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.clubia-tech-card-header > div > span {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  color: var(--clubia-secondary);
+
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.clubia-tech-card-header h3 {
+  margin: 0;
+
+  color: var(--clubia-primary);
+
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.clubia-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  padding-top: 1.5rem;
+}
+
+.clubia-tech-item {
+  display: flex;
+  align-items: center;
+
+  gap: 0.55rem;
+
+  min-height: 44px;
+
+  padding: 0.55rem 0.75rem;
+
+  border: 1px solid rgba(17, 24, 87, 0.07);
+  border-radius: 8px;
+
+  background: #fafbfe;
+
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease,
+    background 200ms ease;
+}
+
+.clubia-tech-item:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(136, 222, 251, 0.55);
+
+  background: #ffffff;
+}
+
+.clubia-tech-item img {
+  width: 25px;
+  height: 25px;
+
   object-fit: contain;
-  flex: 0 0 auto;
-  transition: transform 0.3s ease;
+
+  display: block;
 }
 
-.contenedorClubia > .contenedorLenguajes{
+.clubia-tech-item span {
+  color: var(--clubia-primary);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* ============================================================
+   FUNCIONALIDADES
+   ============================================================ */
+
+.clubia-features {
+  width: 100%;
+
+  padding: 8rem 7%;
+}
+
+.clubia-features-heading {
+  margin-bottom: 6rem;
+}
+
+.clubia-feature-block {
+  width: min(1200px, 100%);
+
+  margin: 0 auto 8rem;
+}
+
+.clubia-feature-block:last-child {
+  margin-bottom: 0;
+}
+
+.clubia-feature-content {
+  display: grid;
+
+  grid-template-columns:
+    90px minmax(0, 1fr);
+
+  gap: 2rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.clubia-feature-number {
+  padding-top: 0.25rem;
+
+  color: var(--clubia-accent);
+
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.clubia-feature-text {
+  max-width: 850px;
+}
+
+.clubia-feature-label {
+  display: block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--clubia-secondary);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.clubia-feature-text h3 {
+  margin: 0 0 1.3rem;
+
+  color: var(--clubia-primary);
+
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.clubia-feature-text p {
+  max-width: 800px;
+
+  margin: 0 0 1rem;
+
+  color: var(--clubia-muted);
+
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.clubia-feature-text p strong {
+  color: var(--clubia-primary);
+}
+
+/* ============================================================
+   CARRUSELES
+   ============================================================ */
+
+.clubia-feature-block .amc-container {
+  width: 100%;
+}
+
+.clubia-feature-block .amc-wrapper {
+  border: 1px solid rgba(17, 24, 87, 0.08);
+
+  background: #fafbfe;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .clubia-hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .clubia-tech-section,
+  .clubia-features {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .clubia-hero::after {
+    display: none;
+  }
+
+  .clubia-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   TABLET / MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .clubia-hero {
+    min-height: auto;
+
+    padding:
+      7rem
+      1.3rem
+      5rem;
+
+    gap: 3.5rem;
+  }
+
+  .clubia-hero::before {
+    display: none;
+  }
+
+  .clubia-eyebrow {
+    font-size: 0.55rem;
+  }
+
+  .clubia-hero-title {
+    font-size: clamp(
+      2.7rem,
+      13vw,
+      4rem
+    );
+  }
+
+  .clubia-hero-description {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .clubia-hero-tags {
+    gap: 0.5rem;
+  }
+
+  .clubia-hero-tags span {
+    padding: 0.55rem 0.75rem;
+
+    font-size: 0.6rem;
+  }
+
+  /* ----------------------------------------------------------
+     Video
+     ---------------------------------------------------------- */
+
+  .clubia-video-wrapper {
+    padding: 1rem;
+  }
+
+  .clubia-video-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .clubia-video-header h2 {
+    font-size: 1.15rem;
+  }
+
+  .clubia-video-status {
+    align-self: flex-start;
+  }
+
+  /* ----------------------------------------------------------
+     Tecnologías
+     ---------------------------------------------------------- */
+
+  .clubia-tech-section,
+  .clubia-features {
+    padding:
+      5rem
+      1.3rem;
+  }
+
+  .clubia-section-heading {
+    margin-bottom: 3rem;
+  }
+
+  .clubia-section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .clubia-section-heading p {
+    font-size: 0.82rem;
+  }
+
+  .clubia-tech-card {
+    min-height: auto;
+
+    padding: 1.4rem;
+  }
+
+  .clubia-tech-card-header {
+    gap: 0.8rem;
+  }
+
+  .clubia-tech-card-header h3 {
+    font-size: 1rem;
+  }
+
+  .clubia-tech-item {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .clubia-tech-item img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .clubia-tech-item span {
+    font-size: 0.62rem;
+  }
+
+  /* ----------------------------------------------------------
+     Funcionalidades
+     ---------------------------------------------------------- */
+
+  .clubia-features-heading {
+    margin-bottom: 4rem;
+  }
+
+  .clubia-feature-block {
     margin-bottom: 5rem;
-    position: relative;
-    top: 15vh;
+  }
+
+  .clubia-feature-content {
+    grid-template-columns: 1fr;
+
+    gap: 0.8rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .clubia-feature-number {
+    font-size: 1.6rem;
+  }
+
+  .clubia-feature-text h3 {
+    font-size: 1.55rem;
+  }
+
+  .clubia-feature-text p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
 }
 
-@media (max-width: 768px) {
+/* ============================================================
+   CARRUSELES — CAPTURAS DE ESCRITORIO
+   Las imágenes originales son aproximadamente 1900 × 900.
+   ============================================================ */
 
-    #seccionUno{
-        bottom: 3vh;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .contenedorClubia > span {
-        width: 90%;
-        bottom: 4vh;
-        font-size: 1rem;
-    }
-
-    .plyr {
-        width: 95%;
-    }
-
-    .titulotres{
-        font-size: 1.8rem;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .contenedorClubia > .contenedorLenguajes{
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        top: 10vh;
-    }
-
-    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes {
-        width: 90%;
-        min-width: unset;
-        min-height: unset;
-    }
-
-    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes > div {
-        gap: 1rem;
-    }
-
-    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .funcionalidades {
-        width: 95%;
-        top: 10vh;
-    }
-
-    .funcionalidades > h2{
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .funcionalidadesSeccion h3{
-        text-align: center;
-    }
-
-    .funcionalidadesSeccion{
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+.clubia-feature-block .amc-item {
+  width: 560px !important;
+  flex: 0 0 560px !important;
 }
 
-@media (max-width: 480px) {
-
-    #seccionUno{
-        font-size: 1.7rem;
-    }
-
-    .titulotres{
-        font-size: 1.5rem;
-    }
-
-    .contenedorClubia > span{
-        width: 95%;
-        font-size: 0.95rem;
-    }
-
-    .contenedorClubia > .contenedorLenguajes > .cartaLenguajes div img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .funcionalidadesSeccion h3{
-        font-size: 1.1rem;
-    }
-
-    .funcionalidadesSeccion span{
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
+.clubia-feature-block .amc-image {
+  width: 100% !important;
+  height: 285px !important;
+  object-fit: contain !important;
 }
+
+/* ============================================================
+   CARRUSELES — TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .clubia-feature-block .amc-item {
+    width: 460px !important;
+    flex: 0 0 460px !important;
+  }
+
+  .clubia-feature-block .amc-image {
+    height: 250px !important;
+  }
+}
+
+/* ============================================================
+   CARRUSELES — MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .clubia-feature-block .amc-item {
+    width: 340px !important;
+    flex: 0 0 340px !important;
+  }
+
+  .clubia-feature-block .amc-image {
+    height: 190px !important;
+  }
+}
+

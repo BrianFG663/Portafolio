@@ -1,192 +1,831 @@
-body {
-  position: relative;
-  z-index: 0;
-}
 
+/* ============================================================
+   ASIST-O-MATIC
+   Página individual de proyecto
+   Estilo visual basado en FitAR
+   ============================================================ */
 
-.contenedorObra {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #111857;
-    font-family: monospace;
-    font-size: 1rem;
-    font-weight: 100;
-    position: relative;
-    z-index: 0;
-    
-}
+.asistenciaPagina {
+  --asistencia-primary: #111857;
+  --asistencia-secondary: #4b2c9e;
+  --asistencia-accent: #88defb;
+  --asistencia-text: #111857;
+  --asistencia-muted: rgba(17, 24, 87, 0.58);
+  --asistencia-border: rgba(17, 24, 87, 0.1);
 
-.contenedorObra > .carrusel-screenshots{
-    margin-top: 7rem;
-}
-
-strong {
-    font-weight: 600;
-}
-
-#seccionUno{
-    margin-top: 8rem;
-    font-size: 3rem;
-}
-
-h2 {
-    font-weight: 100;
-}
-
-.contenedorObra>span {
-    width: 50%;
-    font-size: 1.2rem;
-    text-align: center;
-    position: relative;
-    top: 5vh;
-}
-
-.funcionalidades {
-    position: relative;
-    top: 10vh;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.funcionalidades h2{
-    font-size: 2rem;
-}
-
-.funcionalidadesSeccion {
-    margin-bottom: 1rem;
-    background-color: white;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(136, 222, 251, 0.4);
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.funcionalidadesSeccion:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 10px rgba(62, 203, 250, 0.603);
-    border-left: none !important;
-    border-right: none !important;
-}
-
-.funcionalidadesSeccion > h3 {
-    color: #4b2c9e;
-    font-weight: 600;
-}
-
-.titulotres{
-    position: relative;
-    top: 1vh !important;
-    font-size: 2.2rem;
-}
-
-.contenedorObra > .contenedorLenguajes{
-    margin-bottom: 5rem;
-    position: relative;
-    top: 0vh;
-}
-
-.contenedorObra > .contenedorLenguajes > .cartaLenguajes {
-  width: 30%;
-  min-width: 300px;
-  height: auto;
-  min-height: 400px;
-}
-
-.contenedorObra > .contenedorLenguajes > .cartaLenguajes>div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
   width: 100%;
-  max-width: 400px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: var(--asistencia-text);
 }
 
-.contenedorObra > .contenedorLenguajes > .cartaLenguajes div img {
-  width: 110px;
+
+/* ============================================================
+   ELEMENTOS GENERALES
+   ============================================================ */
+
+.asistenciaPagina *,
+.asistenciaPagina *::before,
+.asistenciaPagina *::after {
+  box-sizing: border-box;
+}
+
+.asistenciaPagina strong {
+  color: var(--asistencia-secondary);
+  font-weight: 700;
+}
+
+.asistenciaCursor {
+  display: inline-block;
+  margin-left: 0.15rem;
+  color: var(--asistencia-accent);
+  font-weight: 400;
+  animation: asistenciaCursor 1s steps(1) infinite;
+}
+
+@keyframes asistenciaCursor {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.asistenciaHero {
   position: relative;
-  top: 2rem;
-  height: 110px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 9rem 7% 7rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 82% 28%,
+      rgba(136, 222, 251, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 10% 75%,
+      rgba(75, 44, 158, 0.05),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+
+/* ------------------------------------------------------------
+   Decoración lateral
+   ------------------------------------------------------------ */
+
+.asistenciaHero::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 4%;
+
+  width: 1px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(17, 24, 87, 0.08) 20%,
+    rgba(17, 24, 87, 0.08) 80%,
+    transparent
+  );
+}
+
+.asistenciaHero::after {
+  content: "ASIST-O-MATIC";
+
+  position: absolute;
+  right: -4.5rem;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(90deg);
+
+  color: rgba(17, 24, 87, 0.035);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+
+  pointer-events: none;
+}
+
+
+/* ------------------------------------------------------------
+   Contenido del hero
+   ------------------------------------------------------------ */
+
+.asistenciaHeroEtiqueta {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  width: fit-content;
+  margin-bottom: 1.5rem;
+
+  color: var(--asistencia-secondary);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.asistenciaHeroEtiqueta::before {
+  content: "";
+
+  width: 2.2rem;
+  height: 1px;
+
+  background: var(--asistencia-accent);
+}
+
+.asistenciaHeroTitulo {
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+  margin: 0;
+
+  color: var(--asistencia-primary);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+
+.asistenciaHeroTitulo strong {
+  display: block;
+  color: var(--asistencia-secondary);
+}
+
+.asistenciaHeroDescripcion {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+  margin: 2.4rem 0 0;
+
+  color: var(--asistencia-muted);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.8;
+}
+
+.asistenciaHeroDescripcion strong {
+  color: var(--asistencia-primary);
+}
+
+.asistenciaHeroLinea {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 850px;
+  height: 1px;
+
+  margin-top: 3rem;
+
+  background: linear-gradient(
+    90deg,
+    var(--asistencia-secondary),
+    var(--asistencia-accent),
+    transparent
+  );
+}
+
+
+/* ============================================================
+   VISTA GENERAL
+   ============================================================ */
+
+.asistenciaVistaPrincipal {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 2rem 7% 8rem;
+
+  background: #ffffff;
+}
+
+.asistenciaVistaPrincipal > .asistenciaSeccionEtiqueta {
+  width: min(1200px, 100%);
+  margin: 0 auto 1.5rem;
+}
+
+
+/* ============================================================
+   ETIQUETAS GENERALES
+   ============================================================ */
+
+.asistenciaSeccionEtiqueta {
+  display: block;
+
+  color: var(--asistencia-secondary);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+
+/* ============================================================
+   CARRUSEL PRINCIPAL
+   ============================================================ */
+
+.asistenciaVistaPrincipal .amc-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.asistenciaVistaPrincipal .amc-heading {
+  display: none;
+}
+
+.asistenciaVistaPrincipal .amc-wrapper {
+  width: 100%;
+  min-height: 320px;
+  overflow: hidden;
+
+  border: 1px solid var(--asistencia-border);
+  background: #fafbfe;
+
+  box-shadow:
+    0 25px 80px rgba(17, 24, 87, 0.08),
+    0 4px 15px rgba(17, 24, 87, 0.03);
+}
+
+.asistenciaVistaPrincipal .amc-item {
+  width: 560px !important;
+  flex: 0 0 560px !important;
+}
+
+.asistenciaVistaPrincipal .amc-image {
+  width: 100% !important;
+  height: 285px !important;
+
+  object-fit: contain !important;
+  background: #ffffff;
+}
+
+
+/* ============================================================
+   ENCABEZADOS DE SECCIÓN
+   ============================================================ */
+
+.asistenciaSeccionEncabezado,
+.asistenciaFuncionalidadesEncabezado {
+  width: min(850px, 100%);
+  margin: 0 auto 4rem;
+
+  text-align: center;
+}
+
+.asistenciaSeccionTitulo {
+  margin: 0;
+
+  color: var(--asistencia-primary);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.asistenciaSeccionDescripcion {
+  max-width: 680px;
+  margin: 1.4rem auto 0;
+
+  color: var(--asistencia-muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+
+/* ============================================================
+   TECNOLOGÍAS
+   ============================================================ */
+
+.asistenciaTecnologias {
+  width: 100%;
+  padding: 8rem 7%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f9fd 50%,
+      #ffffff 100%
+    );
+}
+
+.asistenciaTecnologiasGrid {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.asistenciaTecnologiaCard {
+  position: relative;
+
+  min-height: 240px;
+  padding: 2rem;
+
+  border: 1px solid var(--asistencia-border);
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(17, 24, 87, 0.045);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.asistenciaTecnologiaCard:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(75, 44, 158, 0.2);
+
+  box-shadow:
+    0 20px 45px rgba(17, 24, 87, 0.08);
+}
+
+.asistenciaTecnologiaCardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding-bottom: 1.4rem;
+
+  border-bottom: 1px solid rgba(17, 24, 87, 0.08);
+}
+
+.asistenciaTecnologiaNumero {
+  flex-shrink: 0;
+
+  color: var(--asistencia-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.asistenciaTecnologiaCardHeader h3 {
+  margin: 0;
+
+  color: var(--asistencia-primary);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.asistenciaTecnologiaLista {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding-top: 1.5rem;
+}
+
+.asistenciaTecnologia {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+
+  border: 1px solid rgba(17, 24, 87, 0.07);
+  border-radius: 8px;
+
+  background: #fafbfe;
+
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease,
+    background 200ms ease;
+}
+
+.asistenciaTecnologia:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(136, 222, 251, 0.55);
+  background: #ffffff;
+}
+
+.asistenciaTecnologia img {
+  width: 25px;
+  height: 25px;
+
   object-fit: contain;
-  flex: 0 0 auto;
-  transition: transform 0.3s ease;
+  display: block;
+}
+
+.asistenciaTecnologia span {
+  color: var(--asistencia-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 
 
-.contenedorImagenes{
-    border: 1px solid green;
+/* ============================================================
+   FUNCIONALIDADES
+   ============================================================ */
+
+.asistenciaFuncionalidades {
+  width: 100%;
+  padding: 8rem 7%;
+
+  background: #ffffff;
+}
+
+.asistenciaFuncionalidadesEncabezado {
+  margin-bottom: 6rem;
+}
+
+.asistenciaFuncionalidad {
+  width: min(1200px, 100%);
+  margin: 0 auto 8rem;
+}
+
+.asistenciaFuncionalidad:last-child {
+  margin-bottom: 0;
+}
+
+.asistenciaFuncionalidadContenido {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 2rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.asistenciaFuncionalidadNumero {
+  padding-top: 0.25rem;
+
+  color: var(--asistencia-accent);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.asistenciaFuncionalidadContenido > div:last-child {
+  max-width: 850px;
+}
+
+.asistenciaFuncionalidadEtiqueta {
+  display: block;
+  margin-bottom: 0.8rem;
+
+  color: var(--asistencia-secondary);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.asistenciaFuncionalidadContenido h3 {
+  margin: 0 0 1.3rem;
+
+  color: var(--asistencia-primary);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.asistenciaFuncionalidadContenido p {
+  max-width: 800px;
+  margin: 0 0 1rem;
+
+  color: var(--asistencia-muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.asistenciaFuncionalidadContenido p strong {
+  color: var(--asistencia-primary);
 }
 
 
-#karen{
-    position: relative;
-    width: 70% !important;
-    top: -7vh !important;
+/* ============================================================
+   CARRUSELES DE FUNCIONALIDADES
+   ============================================================ */
+
+.asistenciaFuncionalidad .amc-container {
+  width: 100%;
 }
 
-#karentitulo{
-    position: relative;
-    top: -3vh !important;
+.asistenciaFuncionalidad .amc-heading {
+  display: none;
 }
 
-#karenlenguajes{
-    position: relative;
-    top: -7vh !important;
+.asistenciaFuncionalidad .amc-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid rgba(17, 24, 87, 0.08);
+  background: #fafbfe;
+
+  box-shadow:
+    0 12px 35px rgba(17, 24, 87, 0.045);
 }
 
-/* Responsive styles for mobile and tablets */
-@media (max-width: 768px) {
-  .contenedorObra {
-    font-size: 0.9rem;
+.asistenciaFuncionalidad .amc-item {
+  width: 560px !important;
+  flex: 0 0 560px !important;
+}
+
+.asistenciaFuncionalidad .amc-image {
+  width: 100% !important;
+  height: 285px !important;
+
+  object-fit: contain !important;
+  background: #ffffff;
+}
+
+
+/* ============================================================
+   CIERRE
+   ============================================================ */
+
+.asistenciaCierre {
+  width: 100%;
+  padding: 4rem 7% 6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  background: #ffffff;
+}
+
+.asistenciaCierreLinea {
+  flex: 1;
+  max-width: 180px;
+  height: 1px;
+
+  background: rgba(17, 24, 87, 0.1);
+}
+
+.asistenciaCierre span {
+  color: var(--asistencia-secondary);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.asistenciaCierre p {
+  max-width: 600px;
+  margin: 0;
+
+  color: rgba(17, 24, 87, 0.45);
+  font-size: 0.72rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .asistenciaHero {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  #seccionUno {
-    font-size: 2.5rem;
-    margin-top: 5rem;
+  .asistenciaVistaPrincipal,
+  .asistenciaTecnologias,
+  .asistenciaFuncionalidades {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  .contenedorObra > span {
-    width: 80%;
+  .asistenciaHero::after {
+    display: none;
+  }
+
+  .asistenciaTecnologiasGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ----------------------------------------------------------
+     Carrusel principal
+     ---------------------------------------------------------- */
+
+  .asistenciaVistaPrincipal .amc-item {
+    width: 460px !important;
+    flex-basis: 460px !important;
+  }
+
+  .asistenciaVistaPrincipal .amc-image {
+    height: 250px !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Carruseles de funcionalidades
+     ---------------------------------------------------------- */
+
+  .asistenciaFuncionalidad .amc-item {
+    width: 460px !important;
+    flex-basis: 460px !important;
+  }
+
+  .asistenciaFuncionalidad .amc-image {
+    height: 250px !important;
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MÓVIL
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .asistenciaHero {
+    min-height: auto;
+    padding: 7rem 1.3rem 5rem;
+  }
+
+  .asistenciaHero::before {
+    display: none;
+  }
+
+  .asistenciaHeroEtiqueta {
+    font-size: 0.55rem;
+  }
+
+  .asistenciaHeroTitulo {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .asistenciaHeroDescripcion {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .asistenciaHeroLinea {
+    margin-top: 2.3rem;
+  }
+
+
+  /* ----------------------------------------------------------
+     Vista general
+     ---------------------------------------------------------- */
+
+  .asistenciaVistaPrincipal {
+    padding: 1rem 1.3rem 5rem;
+  }
+
+  .asistenciaVistaPrincipal > .asistenciaSeccionEtiqueta {
+    margin-bottom: 1rem;
+  }
+
+  .asistenciaVistaPrincipal .amc-wrapper {
+    min-height: 220px;
+  }
+
+  .asistenciaVistaPrincipal .amc-item {
+    width: 340px !important;
+    flex-basis: 340px !important;
+  }
+
+  .asistenciaVistaPrincipal .amc-image {
+    height: 190px !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Tecnologías
+     ---------------------------------------------------------- */
+
+  .asistenciaTecnologias,
+  .asistenciaFuncionalidades {
+    padding: 5rem 1.3rem;
+  }
+
+  .asistenciaSeccionEncabezado,
+  .asistenciaFuncionalidadesEncabezado {
+    margin-bottom: 3rem;
+  }
+
+  .asistenciaSeccionTitulo {
+    font-size: 2rem;
+  }
+
+  .asistenciaSeccionDescripcion {
+    font-size: 0.82rem;
+  }
+
+  .asistenciaTecnologiaCard {
+    min-height: auto;
+    padding: 1.4rem;
+  }
+
+  .asistenciaTecnologiaCardHeader {
+    gap: 0.8rem;
+  }
+
+  .asistenciaTecnologiaCardHeader h3 {
     font-size: 1rem;
   }
 
-  .funcionalidades {
-    width: 90%;
-    top: 5vh;
+  .asistenciaTecnologia {
+    padding: 0.5rem 0.65rem;
   }
 
-  .funcionalidades h2 {
-    font-size: 1.8rem;
+  .asistenciaTecnologia img {
+    width: 22px;
+    height: 22px;
   }
 
-  .titulotres {
-    font-size: 1.8rem;
+  .asistenciaTecnologia span {
+    font-size: 0.62rem;
   }
 
-  .contenedorObra > .contenedorLenguajes > .cartaLenguajes {
-    width: 80%;
-    min-width: 250px;
-    min-height: 300px;
+
+  /* ----------------------------------------------------------
+     Funcionalidades
+     ---------------------------------------------------------- */
+
+  .asistenciaFuncionalidadesEncabezado {
+    margin-bottom: 4rem;
   }
 
-  .contenedorObra > .contenedorLenguajes > .cartaLenguajes div img {
-    width: 80px;
-    height: 80px;
-    top: 1rem;
+  .asistenciaFuncionalidad {
+    margin-bottom: 5rem;
   }
 
-  #karen {
-    width: 90% !important;
+  .asistenciaFuncionalidadContenido {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .asistenciaFuncionalidadNumero {
+    font-size: 1.6rem;
+  }
+
+  .asistenciaFuncionalidadContenido h3 {
+    font-size: 1.55rem;
+  }
+
+  .asistenciaFuncionalidadContenido p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .asistenciaFuncionalidad .amc-item {
+    width: 340px !important;
+    flex-basis: 340px !important;
+  }
+
+  .asistenciaFuncionalidad .amc-image {
+    height: 190px !important;
+  }
+
+
+  /* ----------------------------------------------------------
+     Cierre
+     ---------------------------------------------------------- */
+
+  .asistenciaCierre {
+    padding: 3rem 1.3rem 4rem;
+
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .asistenciaCierreLinea {
+    display: none;
+  }
+
+  .asistenciaCierre p {
+    font-size: 0.65rem;
   }
 }
+
