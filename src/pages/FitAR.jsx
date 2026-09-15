@@ -816,7 +816,7 @@ export default function FitAR() {
 
 
           <a
-            href="/FitAR.apk"
+            href="https://drive.google.com/file/d/1hF1qCJhSF5z8GBtbE_iAsN9JWZjSlu0u/view?usp=sharing"
             className="fitar-download-button"
             download
           >
